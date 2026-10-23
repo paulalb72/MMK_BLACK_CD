@@ -1,0 +1,13 @@
+.git
+.gitignore
+.gitattributes
+.dockerignore
+Dockerfile
+.env
+.env.*
+README.md
+dev-server.js
+api/daten/*
+!api/daten/.htaccess
+statistik/daten/*
+!statistik/daten/.htaccess
