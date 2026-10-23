@@ -1,0 +1,8 @@
+# Zugangsdaten
+.env
+
+# Laufzeitdaten (die .htaccess-Sperren in den Ordnern gehören ins Repo)
+api/daten/*
+!api/daten/.htaccess
+statistik/daten/*
+!statistik/daten/.htaccess

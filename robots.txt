@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /statistik/
+Sitemap: https://makemyki.de/sitemap.xml

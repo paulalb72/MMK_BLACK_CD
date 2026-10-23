@@ -1,0 +1,11 @@
+# Konfiguration und Hilfsfunktionen nicht direkt aufrufbar
+<FilesMatch "^(konfig|lib)\.php$">
+<IfModule mod_authz_core.c>
+Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+Order allow,deny
+Deny from all
+</IfModule>
+</FilesMatch>
+Header always set X-Robots-Tag "noindex"
