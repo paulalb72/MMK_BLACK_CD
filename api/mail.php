@@ -5,7 +5,7 @@
 // .env:
 //   SMTP_USER=info@makemyki.de
 //   SMTP_PASS=abcd efgh ijkl mnop      (App-Passwort, Leerzeichen sind egal)
-// optional: SMTP_HOST (smtp.gmail.com), SMTP_PORT (465), MAIL_TO (Empfänger der Anfragen, sonst SMTP_USER),
+// optional: SMTP_HOST (smtp.gmail.com), SMTP_PORT (587; Hetzner sperrt ausgehend Port 465), MAIL_TO (Empfänger der Anfragen, sonst SMTP_USER),
 //           REPORT_TO (Empfänger des Wochenberichts), MAIL_FROM_NAME
 
 date_default_timezone_set('Europe/Berlin');
@@ -45,7 +45,7 @@ function kopf_kodieren(string $text): string {
  */
 function smtp_mail(string $an, string $betreff, string $inhalt, bool $html = false, string $antwortAn = '', string $antwortName = ''): array {
     $host = env('SMTP_HOST', 'smtp.gmail.com');
-    $port = (int)env('SMTP_PORT', '465');
+    $port = (int)env('SMTP_PORT', '587');
     $user = env('SMTP_USER');
     $pass = str_replace(' ', '', env('SMTP_PASS'));
     if ($user === '' || $pass === '') return [false, 'SMTP_USER oder SMTP_PASS fehlt in der .env'];
