@@ -18,6 +18,7 @@ RUN a2enmod rewrite headers deflate \
       echo '</FilesMatch>'; \
     } > /etc/apache2/conf-available/makemyki.conf \
  && a2enconf makemyki \
+ && cp "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini" \
  && { echo 'expose_php = Off'; echo 'date.timezone = Europe/Berlin'; } > /usr/local/etc/php/conf.d/makemyki.ini
 
 COPY . /var/www/html/

@@ -11,3 +11,6 @@ api/daten/*
 !api/daten/.htaccess
 statistik/daten/*
 !statistik/daten/.htaccess
+# Von Coolify im Build-Ordner erzeugt, gehört nicht in den Webroot
+docker-compose.yaml
+docker-compose.yml
