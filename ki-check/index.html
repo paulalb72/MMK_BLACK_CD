@@ -961,6 +961,80 @@ html.menu-offen .mobile-cta,html.menu-offen .kontakt{display:none}
   .contact-card__links{gap:0}
   .contact-card__links a{padding-block:8px}
 }
+
+/* ===== Mobil: mehr Luft, weniger Kästen (26.10.2026) ===== */
+/* Laufband: Punkt nur vor jedem Eintrag, nicht zusätzlich vor einem .nw darin */
+.marquee__track span span::before{content:none}
+.rg__live{justify-self:start}
+/* Hero: Safari malt background-clip:text auch für noch unsichtbare Zeichen, deshalb kommt der Verlauf erst nach dem Tippen */
+.tippen .type__text:not(.ist-fertig) em{background:none;color:var(--ink)}
+.hero h1 em{transition:color .8s ease}
+/* Promo-Leiste: auf dem Handy nur eine kurze Zeile */
+.promo-bar a.promo-bar__kurz{display:none}
+.promo-bar__kurz b{color:#fff}
+.promo-bar__kurz svg{width:15px;height:15px;margin-left:4px;vertical-align:-3px}
+@media (max-width:640px){
+  /* Ruhigere Überschriften und Kopfbereiche */
+  h2{font-size:28px;line-height:1.18}
+  .lead,.sol-hero-lead{font-size:16px}
+  .section-head,.sol-head{gap:12px;margin-bottom:28px}
+  .page-hero{padding-block:32px 40px}
+  .page-hero h1{font-size:32px}
+  .legal-hero h1{font-size:clamp(28px,8vw,32px)}
+  /* Hero: Headline in zwei Zeilen, Workflow-Karte nur mit den Schritten */
+  .hero{padding-block:28px 48px}
+  .hero__copy{gap:20px}
+  .hero h1{font-size:min(36px,calc(10.4vw - 4px));line-height:1.1}
+  .hero .flow__list small{display:none}
+  .hero .flow__list li{align-items:center;padding-bottom:14px}
+  .hero .flow__foot{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .hero .flow__foot div{padding:12px;border-bottom:0;border-right:1px solid var(--line)}
+  .hero .flow__foot div:last-child{border-right:0}
+  .hero .flow__foot strong{font-size:17px}
+  .hero .flow__foot span{font-size:11.5px}
+  /* Infokarten als Liste mit Trennlinien statt einzelner Kästen */
+  .benefits,.feature-grid,.sipoc-explain{gap:0;border-top:1px solid var(--line)}
+  .benefit,.feature-grid .feature,.sipoc-card{padding:20px 0;border:0;border-bottom:1px solid var(--line);border-radius:0;background:none;box-shadow:none}
+  .sol-dark .feature-grid,.sol-dark .feature-grid .feature{border-color:var(--dark-line)}
+  .benefit p,.feature-grid .feature p,.road__step p{font-size:15px}
+  .road__step{padding:20px 0}
+  /* Leistungsübersicht: kompakte Zeilen, Symbol links neben Titel und Text */
+  .solution-nav{gap:10px}
+  .solution-nav a{grid-template-columns:40px minmax(0,1fr);row-gap:2px;padding:16px 18px}
+  .solution-nav .icon-box{grid-row:span 2;width:40px;height:40px}
+  .solution-nav strong{font-size:17px}
+  .solution-nav a > span:last-child{grid-column:2;margin-top:0;font-size:14px}
+  /* Abläufe der Startseite als Schlagwort-Wolke statt 18 Kästen untereinander */
+  .tasks{display:flex;flex-wrap:wrap;gap:8px}
+  .tasks li{min-height:0;padding:8px 14px;border-radius:60px;font-family:var(--font-btn);font-size:14px;line-height:1.3}
+  .tasks li::before{content:none}
+  .tasks-more{margin-top:24px}
+  /* KI-Röntgen: Beispiele als wischbare Reihe statt fünf Zeilen untereinander */
+  .rg__chips{flex-wrap:nowrap;overflow-x:auto;margin-inline:calc(-1 * var(--gutter));padding:0 var(--gutter) 4px;scroll-padding-inline:var(--gutter);scroll-snap-type:x proximity;scrollbar-width:none}
+  .rg__chips::-webkit-scrollbar{display:none}
+  .rg__chips button{flex:0 0 auto;max-width:76%;scroll-snap-align:start;white-space:normal;text-align:left;border-radius:16px;line-height:1.4;padding:10px 14px}
+  /* Profile: kleinere Stichwort-Pills, damit meist zwei in eine Zeile passen */
+  .profile__tags{gap:6px}
+  .profile__tags li{padding:3px 10px;font-size:12px}
+  /* FAQ kompakter */
+  .faq__list,.faq-list{gap:8px}
+  .faq summary{padding:16px 18px;font-size:16px;line-height:1.4}
+  .faq details p{padding:0 18px 18px}
+  .faq-list summary{padding:16px 48px 16px 18px;font-size:16px;line-height:1.4}
+  .faq-list summary::after{right:18px}
+  .faq-list details p{padding:0 18px 18px}
+  /* Anfrage: die Vorteile stehen schon über dem Formular */
+  .anf-form .wiz__trust{display:none}
+}
+@media (max-width:520px){
+  :root{--gutter:20px}
+  /* Nur Hauptaktionen über die volle Breite, Nebenbuttons in natürlicher Breite */
+  main .btn.btn--outline{width:auto;padding:12px 22px;font-size:16px}
+  /* Promo-Leiste einzeilig */
+  .promo-bar .wrap{padding-block:9px}
+  .promo-bar__text,.promo-bar a.promo-bar__link{display:none}
+  .promo-bar a.promo-bar__kurz{display:inline-block;padding-block:0;text-decoration:none}
+}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"MakeMyKI","url":"https://makemyki.de/","description":"KI-Beratung und Prozessautomatisierung für kleine und mittelständische Unternehmen.","telephone":"+49 176 72971823","address":{"@type":"PostalAddress","streetAddress":"In der Lauwiese 4a","postalCode":"54497","addressLocality":"Morbach","addressCountry":"DE"},"areaServed":["DE","AT","CH"]}</script>
 </head>
@@ -988,7 +1062,7 @@ html.menu-offen .mobile-cta,html.menu-offen .kontakt{display:none}
   <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
   <symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 2v6M15 2v6M6 8h12v4a6 6 0 0 1-12 0zM12 18v4"/></symbol>
 </svg>
-<div class="promo-bar" data-bis="2026-12-01"><div class="wrap"><span><b style="color:#fff">Nur im November 2026:</b> <span class="nw">KI-Check</span> <span class="promo-bar__lang">mit Automations-Fahrplan </span>kostenlos, für 10 Unternehmen.</span><a href="/ki-check/">So funktioniert der <span class="nw">KI-Check</span></a></div></div>
+<div class="promo-bar" data-bis="2026-12-01"><div class="wrap"><span class="promo-bar__text"><b style="color:#fff">Nur im November 2026:</b> <span class="nw">KI-Check</span> <span class="promo-bar__lang">mit Automations-Fahrplan </span>kostenlos, für 10 Unternehmen.</span><a class="promo-bar__link" href="/ki-check/">So funktioniert der <span class="nw">KI-Check</span></a><a class="promo-bar__kurz" href="/ki-check/"><b>Nur im November:</b> <span class="nw">KI-Check</span> kostenlos <svg class="i"><use href="#i-arrow"/></svg></a></div></div>
 <header class="header">
   <div class="wrap header__inner">
     <a class="logo" href="/" aria-label="MakeMyKI Startseite"><img src="/bild/?n=logo" alt="MakeMyKI" width="151" height="30"></a>
