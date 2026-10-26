@@ -962,6 +962,95 @@ h1,h2,h3,h4{hyphens:manual;-webkit-hyphens:manual}
 @media (min-width:1041px){.sol-hero h1{font-size:clamp(34px,3.3vw,50px)}}
 @media (max-width:560px){.tasks{grid-template-columns:1fr}}
 .sipoc-col > span{font-size:11px;padding:7px 5px}
+
+/* ===== Mobil-Feinschliff (26.10.2026) ===== */
+/* .nw nur gegen Umbruch, darf keine fremden span-Stile (Block, Labelschrift) übernehmen */
+.nw{display:inline!important;font:inherit!important;letter-spacing:inherit!important;text-transform:inherit!important;color:inherit!important;margin:0!important;padding:0!important}
+/* Überzeile als Fließtext, sonst werden Text und .nw zu Flex-Spalten */
+.eyebrow{display:block}
+html.menu-offen .mobile-cta,html.menu-offen .kontakt{display:none}
+@media (max-width:1040px){
+  .header__inner{min-height:64px}
+  .burger{width:44px;height:44px}
+  .mobile-menu{max-height:calc(100dvh - 64px);overscroll-behavior:contain}
+  .mobile-menu a:not(.btn){padding:11px 8px}
+  /* Footer läuft dunkel bis unter die Mobil-Leiste, kein weißer Streifen */
+  body{padding-bottom:0!important}
+  .footer{padding-bottom:calc(40px + 68px + env(safe-area-inset-bottom,0px))}
+  .kkarte{max-height:calc(100dvh - 100px - env(safe-area-inset-bottom,0px));overflow-y:auto;overscroll-behavior:contain}
+}
+@media (max-width:640px){
+  /* Kopfbereiche einheitlich linksbündig wie der Rest der Seite */
+  .section-head--center,.sol-head-center{margin-inline:0;text-align:left;justify-items:start}
+  .benefits-cta{justify-content:flex-start}
+  .sol-head-center + .chip-row ul,.chip-row-center ul,.q-cloud{justify-content:flex-start}
+  .chip-row-center > p{text-align:left}
+  /* Karten kompakt: Symbol und Titel in einer Zeile, Text darunter über die volle Breite */
+  .feature-grid .feature,.benefit,.pain,.solution-nav a{display:grid;grid-template-columns:44px minmax(0,1fr);column-gap:14px;align-content:start;align-items:center}
+  .feature-grid .feature .icon-box,.benefit .icon-box,.pain .icon-box,.solution-nav .icon-box{width:44px;height:44px;margin:0;border-radius:12px}
+  .feature-grid .feature .icon-box svg,.benefit .icon-box svg,.pain .icon-box svg,.solution-nav .icon-box svg{width:22px;height:22px}
+  .feature-grid .feature h3,.benefit h3,.pain h3{margin:0;font-size:18px}
+  .feature-grid .feature p,.benefit p,.pain p,.solution-nav a > span:last-child{grid-column:1/-1;margin-top:10px}
+  .benefits{gap:12px}
+  .feature-grid{gap:12px}
+  .feature-grid .feature,.benefit{padding:20px}
+  /* Ablauf-Schritte wie auf der Startseite: Nummer links */
+  .flow-steps{gap:24px}
+  .flow-steps li{display:grid;grid-template-columns:44px minmax(0,1fr);column-gap:16px}
+  .flow-num{grid-row:1/span 2;margin:0}
+  .flow-steps h3{padding-top:10px}
+  /* SIPOC-Erklärkarten: Buchstabe links */
+  .sipoc-explain{gap:12px}
+  .sipoc-card{display:grid;grid-template-columns:44px minmax(0,1fr);column-gap:16px;padding:20px}
+  .sipoc-card > b{grid-row:1/span 3;font-size:40px}
+  .sipoc-card small{margin-top:2px}
+  /* SIPOC-Board ohne seitliches Scrollen: eine Zeile je Buchstabe */
+  .sipoc-board{grid-template-columns:minmax(0,1fr);min-width:0;gap:10px}
+  .sipoc-col{position:relative;display:flex;flex-wrap:wrap;align-content:flex-start;gap:6px;min-height:36px;padding-left:46px}
+  .sipoc-col > b{position:absolute;left:0;top:0;width:36px;height:36px;font-size:17px;border-radius:9px}
+  .sipoc-col > small{flex-basis:100%;margin:0;text-align:left;line-height:1.2}
+  .sipoc-col > span{font-size:12px;padding:5px 9px}
+  /* Nutzen-Aufwand-Matrix: Beschriftungen bleiben in ihrem Feld */
+  .matrix{aspect-ratio:1/1.05}
+  .matrix-dot{white-space:normal;max-width:42%;gap:6px;font-size:11px;line-height:1.25}
+  .matrix-dot-left{text-align:right}
+  .matrix-dot:nth-of-type(1){left:6%!important;top:28%!important}
+  .matrix-dot:nth-of-type(2){left:6%!important;top:42%!important}
+  .matrix-dot:nth-of-type(3){left:94%!important;top:26%!important}
+  .matrix-dot:nth-of-type(4){left:6%!important;top:72%!important}
+  .matrix-dot:nth-of-type(5){left:94%!important;top:72%!important}
+  /* Redaktionsplan als Liste statt breiter Wochenspalten */
+  .week-plan{grid-template-columns:minmax(0,1fr);min-width:0;gap:8px}
+  .week-day{grid-template-columns:36px minmax(0,1fr);align-items:center;min-height:0;padding:10px 12px;gap:8px 12px}
+  .week-day:not(:has(.week-post))::after{content:"–";color:var(--accent-soft)}
+  /* Einsatzplan bleibt wischbar, Kante zeigt das an */
+  .scroll-x:has(.plan-table){-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent);padding-bottom:4px}
+  .flow__bar,.mock-bar{flex-wrap:wrap;row-gap:4px}
+  .flow__bar span{white-space:nowrap}
+  .doc-head{flex-wrap:wrap;align-items:center}
+  .doc-head .mock-tag{white-space:nowrap}
+}
+@media (max-width:520px){
+  /* Promo-Leiste kürzer */
+  .promo-bar{font-size:13px}
+  .promo-bar .wrap{gap:2px 10px;padding-block:8px}
+  .promo-bar__lang{display:none}
+  .promo-bar a{display:inline-block;padding-block:3px}
+  /* Alle Buttons im Inhalt gleich breit statt je nach Textlänge */
+  main .btn:not(.rg__los){width:100%}
+  main .textlink{min-height:44px}
+  .consult__card .btn{padding-inline:20px}
+  .closing__actions,.case__actions{width:100%}
+  /* Footer: Leistungen volle Breite, Unternehmen und Rechtliches nebeneinander */
+  .footer__grid{grid-template-columns:1fr 1fr!important;gap:36px 20px}
+  .footer__brand,.footer__grid > div:nth-child(2){grid-column:1/-1}
+  .footer ul{gap:0}
+  .footer ul a{display:inline-block;padding-block:7px}
+  .footer__people a{display:inline-block;padding-block:3px}
+  .footer__bottom{margin-top:36px}
+  .contact-card__links{gap:0}
+  .contact-card__links a{padding-block:8px}
+}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"MakeMyKI","url":"https://makemyki.de/","description":"KI-Beratung und Prozessautomatisierung für kleine und mittelständische Unternehmen.","telephone":"+49 176 72971823","address":{"@type":"PostalAddress","streetAddress":"In der Lauwiese 4a","postalCode":"54497","addressLocality":"Morbach","addressCountry":"DE"},"areaServed":["DE","AT","CH"]}</script>
 <script>try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('tippen');}catch(e){}</script>
@@ -990,7 +1079,7 @@ h1,h2,h3,h4{hyphens:manual;-webkit-hyphens:manual}
   <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
   <symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 2v6M15 2v6M6 8h12v4a6 6 0 0 1-12 0zM12 18v4"/></symbol>
 </svg>
-<div class="promo-bar" data-bis="2026-12-01"><div class="wrap"><span><b style="color:#fff">Nur im November 2026:</b> <span class="nw">KI-Check</span> mit Automations-Fahrplan kostenlos, für 10 Unternehmen.</span><a href="/ki-check/">So funktioniert der <span class="nw">KI-Check</span></a></div></div>
+<div class="promo-bar" data-bis="2026-12-01"><div class="wrap"><span><b style="color:#fff">Nur im November 2026:</b> <span class="nw">KI-Check</span> <span class="promo-bar__lang">mit Automations-Fahrplan </span>kostenlos, für 10 Unternehmen.</span><a href="/ki-check/">So funktioniert der <span class="nw">KI-Check</span></a></div></div>
 <header class="header">
   <div class="wrap header__inner">
     <a class="logo" href="/" aria-label="MakeMyKI Startseite"><img src="/bild/?n=logo" alt="MakeMyKI" width="151" height="30"></a>
@@ -1018,7 +1107,7 @@ h1,h2,h3,h4{hyphens:manual;-webkit-hyphens:manual}
       <p class="lead rise">Wir finden die Abläufe, die dein Team jeden Tag Stunden kosten, und automatisieren sie: mit schlanken Workflows, Schnittstellen und KI, die wirklich mitarbeitet. Für kleine und mittelständische Unternehmen.</p>
       <div class="hero__actions rise">
         <div><a class="btn btn--primary" href="https://calendly.com/makemyki-info" target="_blank" rel="noopener">Erstgespräch buchen <svg class="i"><use href="#i-arrow"/></svg></a><p class="microcopy" style="margin-top:10px">30 Minuten · kostenlos · online</p></div>
-        <a class="textlink textlink--runter" href="#ki-roentgen">Live testen: <span class="nw">KI-Röntgen</span> <svg class="i"><use href="#i-arrow"/></svg></a>
+        <a class="textlink textlink--runter" href="#ki-roentgen"><span>Live testen: <span class="nw">KI-Röntgen</span></span> <svg class="i"><use href="#i-arrow"/></svg></a>
       </div>
     </div>
     <div class="flow-wrap rise">
@@ -1110,7 +1199,7 @@ h1,h2,h3,h4{hyphens:manual;-webkit-hyphens:manual}
 </section><section class="trust" aria-label="Einsatzbereiche"><div class="wrap trust__inner"><p class="trust__label">Wo wir automatisieren <span>Abläufe aus Projekten mit KMU im <span class="nw">DACH-Raum.</span></span></p><div class="marquee"><div class="marquee__track" id="marqueeTrack"><span><span class="nw">E-Mail</span> &amp; Postfach</span><span>Angebote</span><span>Rechnungen</span><span>Einsatzplanung</span><span>Dokumente &amp; PDFs</span><span>CRM &amp; Vertrieb</span><span>Kundenservice</span><span>Reporting</span><span>Bestellungen</span><span>Wissenssuche</span></div></div></div></section><section class="section" id="problem" aria-labelledby="problem-titel"><div class="wrap">
   <div class="section-head reveal"><span class="eyebrow">Der Alltag heute</span><h2 id="problem-titel">Kommt dir das bekannt vor?</h2><p class="lead">In vielen Betrieben steckt ein großer Teil der Arbeitszeit in Aufgaben, die sich jeden Tag gleich wiederholen. Das kostet Zeit, Nerven und am Ende auch Kunden.</p></div>
   <div class="pains reveal">
-    <article class="pain"><span class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 17H7a5 5 0 0 1 0-10h2"/><path d="M15 7h2a5 5 0 0 1 2.2 9.5"/><path d="M8 12h3"/><path d="M3 3l18 18"/></svg></span><h3>Programme ohne Verbindung</h3><p>Daten wandern von Hand zwischen E&#8209;Mail, Excel und Software.</p></article>
+    <article class="pain"><span class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 17H7a5 5 0 0 1 0-10h2"/><path d="M15 7h2a5 5 0 0 1 2.2 9.5"/><path d="M8 12h3"/><path d="M3 3l18 18"/></svg></span><h3>Programme ohne Verbindung</h3><p>Daten wandern von Hand zwischen <span class="nw">E-Mail</span>, Excel und Software.</p></article>
     <article class="pain"><span class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="17" height="10" rx="2.5"/><path d="M22 11v2"/><path d="M6 10.5v3"/></svg></span><h3>Team am Limit</h3><p>Routine frisst die Zeit, die für Kunden fehlt.</p></article>
     <article class="pain"><span class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M17 2l4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></svg></span><h3>Endlose Handarbeit</h3><p>Abtippen, kopieren, nachfassen – jeden Tag dieselben Klicks.</p></article>
     <article class="pain"><span class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><h3>Wissen in einem Kopf</h3><p>Fällt eine Person aus, steht der Ablauf.</p></article>
@@ -1121,7 +1210,7 @@ h1,h2,h3,h4{hyphens:manual;-webkit-hyphens:manual}
     <article class="benefit reveal"><span class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 11.2-4.5"/><path d="M18 13l.9 2.6 2.6.9-2.6.9L18 20l-.9-2.6-2.6-.9 2.6-.9z"/></svg></span><h3>Team entlasten, Zeit gewinnen</h3><p>Automatisierte Arbeitsschritte nehmen deinem Team Routine ab. Die gewonnene Zeit fließt in Kunden, Qualität und neue Aufträge.</p></article>
     <article class="benefit reveal"><span class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span><h3>Wachsen ohne zusätzliches Personal</h3><p>Mit demselben Team schaffst du spürbar mehr. Mehr Aufträge bedeuten nicht automatisch neue Stellen.</p></article>
     <article class="benefit reveal"><span class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></span><h3>Software, die zu deinen Abläufen passt</h3><p>Statt dich an starre Programme anzupassen, verbinden wir deine Werkzeuge so, dass sie deinem Ablauf folgen – nicht umgekehrt.</p></article>
-    <article class="benefit reveal"><span class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l1.9 5.6L19.5 10.5l-5.6 1.9L12 18l-1.9-5.6L4.5 10.5l5.6-1.9z"/><path d="M19 3v4"/><path d="M17 5h4"/></svg></span><h3>KI, die im Alltag wirklich hilft</h3><p>Mehr als ein Chatfenster: KI liest E&#8209;Mails, versteht Dokumente und bereitet Entwürfe vor – direkt in deinen Abläufen.</p></article>
+    <article class="benefit reveal"><span class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l1.9 5.6L19.5 10.5l-5.6 1.9L12 18l-1.9-5.6L4.5 10.5l5.6-1.9z"/><path d="M19 3v4"/><path d="M17 5h4"/></svg></span><h3>KI, die im Alltag wirklich hilft</h3><p>Mehr als ein Chatfenster: KI liest <span class="nw">E-Mail</span>s, versteht Dokumente und bereitet Entwürfe vor – direkt in deinen Abläufen.</p></article>
   </div>
   <div class="benefits-cta reveal"><a class="btn btn--primary" href="#erstgespraech">Kostenloses Erstgespräch <svg class="i"><use href="#i-arrow"/></svg></a><a class="textlink" href="/leistungen/">Konkrete Lösungen ansehen <svg class="i"><use href="#i-arrow"/></svg></a></div>
 </div></section><section class="section section--dark" id="ablaeufe" aria-labelledby="ablaeufe-titel"><div class="wrap">
@@ -1466,7 +1555,7 @@ h1,h2,h3,h4{hyphens:manual;-webkit-hyphens:manual}
 <script>
 (function(){
   var burger=document.getElementById('burger'),menu=document.getElementById('mobileMenu');
-  if(burger&&menu){burger.addEventListener('click',function(){var open=!menu.hidden;menu.hidden=open;burger.setAttribute('aria-expanded',String(!open));burger.setAttribute('aria-label',open?'Menü öffnen':'Menü schließen');});}
+  if(burger&&menu){burger.addEventListener('click',function(){var open=!menu.hidden;menu.hidden=open;burger.setAttribute('aria-expanded',String(!open));burger.setAttribute('aria-label',open?'Menü öffnen':'Menü schließen');document.documentElement.classList.toggle('menu-offen',!open);if(!open)menu.style.maxHeight=Math.max(240,window.innerHeight-menu.getBoundingClientRect().top)+'px';});}
   var track=document.getElementById('marqueeTrack');
   if(track&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){var n=track.children.length;track.innerHTML+=track.innerHTML;Array.prototype.forEach.call(track.children,function(el,i){if(i>=n)el.setAttribute('aria-hidden','true');});}
 

@@ -1075,6 +1075,95 @@ h1,h2,h3,h4{hyphens:manual;-webkit-hyphens:manual}
 @media (min-width:1041px){.sol-hero h1{font-size:clamp(34px,3.3vw,50px)}}
 @media (max-width:560px){.tasks{grid-template-columns:1fr}}
 .sipoc-col > span{font-size:11px;padding:7px 5px}
+
+/* ===== Mobil-Feinschliff (26.10.2026) ===== */
+/* .nw nur gegen Umbruch, darf keine fremden span-Stile (Block, Labelschrift) übernehmen */
+.nw{display:inline!important;font:inherit!important;letter-spacing:inherit!important;text-transform:inherit!important;color:inherit!important;margin:0!important;padding:0!important}
+/* Überzeile als Fließtext, sonst werden Text und .nw zu Flex-Spalten */
+.eyebrow{display:block}
+html.menu-offen .mobile-cta,html.menu-offen .kontakt{display:none}
+@media (max-width:1040px){
+  .header__inner{min-height:64px}
+  .burger{width:44px;height:44px}
+  .mobile-menu{max-height:calc(100dvh - 64px);overscroll-behavior:contain}
+  .mobile-menu a:not(.btn){padding:11px 8px}
+  /* Footer läuft dunkel bis unter die Mobil-Leiste, kein weißer Streifen */
+  body{padding-bottom:0!important}
+  .footer{padding-bottom:calc(40px + 68px + env(safe-area-inset-bottom,0px))}
+  .kkarte{max-height:calc(100dvh - 100px - env(safe-area-inset-bottom,0px));overflow-y:auto;overscroll-behavior:contain}
+}
+@media (max-width:640px){
+  /* Kopfbereiche einheitlich linksbündig wie der Rest der Seite */
+  .section-head--center,.sol-head-center{margin-inline:0;text-align:left;justify-items:start}
+  .benefits-cta{justify-content:flex-start}
+  .sol-head-center + .chip-row ul,.chip-row-center ul,.q-cloud{justify-content:flex-start}
+  .chip-row-center > p{text-align:left}
+  /* Karten kompakt: Symbol und Titel in einer Zeile, Text darunter über die volle Breite */
+  .feature-grid .feature,.benefit,.pain,.solution-nav a{display:grid;grid-template-columns:44px minmax(0,1fr);column-gap:14px;align-content:start;align-items:center}
+  .feature-grid .feature .icon-box,.benefit .icon-box,.pain .icon-box,.solution-nav .icon-box{width:44px;height:44px;margin:0;border-radius:12px}
+  .feature-grid .feature .icon-box svg,.benefit .icon-box svg,.pain .icon-box svg,.solution-nav .icon-box svg{width:22px;height:22px}
+  .feature-grid .feature h3,.benefit h3,.pain h3{margin:0;font-size:18px}
+  .feature-grid .feature p,.benefit p,.pain p,.solution-nav a > span:last-child{grid-column:1/-1;margin-top:10px}
+  .benefits{gap:12px}
+  .feature-grid{gap:12px}
+  .feature-grid .feature,.benefit{padding:20px}
+  /* Ablauf-Schritte wie auf der Startseite: Nummer links */
+  .flow-steps{gap:24px}
+  .flow-steps li{display:grid;grid-template-columns:44px minmax(0,1fr);column-gap:16px}
+  .flow-num{grid-row:1/span 2;margin:0}
+  .flow-steps h3{padding-top:10px}
+  /* SIPOC-Erklärkarten: Buchstabe links */
+  .sipoc-explain{gap:12px}
+  .sipoc-card{display:grid;grid-template-columns:44px minmax(0,1fr);column-gap:16px;padding:20px}
+  .sipoc-card > b{grid-row:1/span 3;font-size:40px}
+  .sipoc-card small{margin-top:2px}
+  /* SIPOC-Board ohne seitliches Scrollen: eine Zeile je Buchstabe */
+  .sipoc-board{grid-template-columns:minmax(0,1fr);min-width:0;gap:10px}
+  .sipoc-col{position:relative;display:flex;flex-wrap:wrap;align-content:flex-start;gap:6px;min-height:36px;padding-left:46px}
+  .sipoc-col > b{position:absolute;left:0;top:0;width:36px;height:36px;font-size:17px;border-radius:9px}
+  .sipoc-col > small{flex-basis:100%;margin:0;text-align:left;line-height:1.2}
+  .sipoc-col > span{font-size:12px;padding:5px 9px}
+  /* Nutzen-Aufwand-Matrix: Beschriftungen bleiben in ihrem Feld */
+  .matrix{aspect-ratio:1/1.05}
+  .matrix-dot{white-space:normal;max-width:42%;gap:6px;font-size:11px;line-height:1.25}
+  .matrix-dot-left{text-align:right}
+  .matrix-dot:nth-of-type(1){left:6%!important;top:28%!important}
+  .matrix-dot:nth-of-type(2){left:6%!important;top:42%!important}
+  .matrix-dot:nth-of-type(3){left:94%!important;top:26%!important}
+  .matrix-dot:nth-of-type(4){left:6%!important;top:72%!important}
+  .matrix-dot:nth-of-type(5){left:94%!important;top:72%!important}
+  /* Redaktionsplan als Liste statt breiter Wochenspalten */
+  .week-plan{grid-template-columns:minmax(0,1fr);min-width:0;gap:8px}
+  .week-day{grid-template-columns:36px minmax(0,1fr);align-items:center;min-height:0;padding:10px 12px;gap:8px 12px}
+  .week-day:not(:has(.week-post))::after{content:"–";color:var(--accent-soft)}
+  /* Einsatzplan bleibt wischbar, Kante zeigt das an */
+  .scroll-x:has(.plan-table){-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent);padding-bottom:4px}
+  .flow__bar,.mock-bar{flex-wrap:wrap;row-gap:4px}
+  .flow__bar span{white-space:nowrap}
+  .doc-head{flex-wrap:wrap;align-items:center}
+  .doc-head .mock-tag{white-space:nowrap}
+}
+@media (max-width:520px){
+  /* Promo-Leiste kürzer */
+  .promo-bar{font-size:13px}
+  .promo-bar .wrap{gap:2px 10px;padding-block:8px}
+  .promo-bar__lang{display:none}
+  .promo-bar a{display:inline-block;padding-block:3px}
+  /* Alle Buttons im Inhalt gleich breit statt je nach Textlänge */
+  main .btn:not(.rg__los){width:100%}
+  main .textlink{min-height:44px}
+  .consult__card .btn{padding-inline:20px}
+  .closing__actions,.case__actions{width:100%}
+  /* Footer: Leistungen volle Breite, Unternehmen und Rechtliches nebeneinander */
+  .footer__grid{grid-template-columns:1fr 1fr!important;gap:36px 20px}
+  .footer__brand,.footer__grid > div:nth-child(2){grid-column:1/-1}
+  .footer ul{gap:0}
+  .footer ul a{display:inline-block;padding-block:7px}
+  .footer__people a{display:inline-block;padding-block:3px}
+  .footer__bottom{margin-top:36px}
+  .contact-card__links{gap:0}
+  .contact-card__links a{padding-block:8px}
+}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"MakeMyKI","url":"https://makemyki.de/","description":"KI-Beratung und Prozessautomatisierung für kleine und mittelständische Unternehmen.","telephone":"+49 176 72971823","address":{"@type":"PostalAddress","streetAddress":"In der Lauwiese 4a","postalCode":"54497","addressLocality":"Morbach","addressCountry":"DE"},"areaServed":["DE","AT","CH"]}</script>
 </head>
@@ -1102,7 +1191,7 @@ h1,h2,h3,h4{hyphens:manual;-webkit-hyphens:manual}
   <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
   <symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 2v6M15 2v6M6 8h12v4a6 6 0 0 1-12 0zM12 18v4"/></symbol>
 </svg>
-<div class="promo-bar" data-bis="2026-12-01"><div class="wrap"><span><b style="color:#fff">Nur im November 2026:</b> <span class="nw">KI-Check</span> mit Automations-Fahrplan kostenlos, für 10 Unternehmen.</span><a href="/ki-check/">So funktioniert der <span class="nw">KI-Check</span></a></div></div>
+<div class="promo-bar" data-bis="2026-12-01"><div class="wrap"><span><b style="color:#fff">Nur im November 2026:</b> <span class="nw">KI-Check</span> <span class="promo-bar__lang">mit Automations-Fahrplan </span>kostenlos, für 10 Unternehmen.</span><a href="/ki-check/">So funktioniert der <span class="nw">KI-Check</span></a></div></div>
 <header class="header">
   <div class="wrap header__inner">
     <a class="logo" href="/" aria-label="MakeMyKI Startseite"><img src="/bild/?n=logo" alt="MakeMyKI" width="151" height="30"></a>
@@ -1258,7 +1347,7 @@ h1,h2,h3,h4{hyphens:manual;-webkit-hyphens:manual}
 <script>
 (function(){
   var burger=document.getElementById('burger'),menu=document.getElementById('mobileMenu');
-  if(burger&&menu){burger.addEventListener('click',function(){var open=!menu.hidden;menu.hidden=open;burger.setAttribute('aria-expanded',String(!open));burger.setAttribute('aria-label',open?'Menü öffnen':'Menü schließen');});}
+  if(burger&&menu){burger.addEventListener('click',function(){var open=!menu.hidden;menu.hidden=open;burger.setAttribute('aria-expanded',String(!open));burger.setAttribute('aria-label',open?'Menü öffnen':'Menü schließen');document.documentElement.classList.toggle('menu-offen',!open);if(!open)menu.style.maxHeight=Math.max(240,window.innerHeight-menu.getBoundingClientRect().top)+'px';});}
   var track=document.getElementById('marqueeTrack');
   if(track&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){var n=track.children.length;track.innerHTML+=track.innerHTML;Array.prototype.forEach.call(track.children,function(el,i){if(i>=n)el.setAttribute('aria-hidden','true');});}
 
