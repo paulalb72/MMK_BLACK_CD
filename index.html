@@ -940,6 +940,10 @@ img.avatar{object-fit:cover;padding:0}
 @media (max-width:760px){.rg__hebel{grid-template-columns:1fr}}
 .rg__fehler{margin-top:20px;padding:16px 18px;border-radius:14px;border:1px solid rgba(255,255,255,.2);color:#fff;display:none}
 .rg.is-fehler .rg__fehler{display:block}
+/* Ohne Ergebnis steht der Hinweis groß an der Stelle des Workflows */
+.rg.is-leer .rg__kopf,.rg.is-leer .rg__grid,.rg.is-leer .rg__hebel{display:none}
+.rg.is-leer .rg__fehler{margin:0 auto;max-width:820px;padding:clamp(32px,5vw,56px) clamp(20px,4vw,48px);border-radius:22px;background:rgba(255,255,255,.04);text-align:center;font-family:var(--font-head);font-weight:700;font-size:clamp(20px,2.2vw,28px);line-height:1.35;letter-spacing:-.01em}
+.rg.is-leer .rg__nochmal{justify-content:center}
 .rg__nochmal{margin-top:22px;display:none;gap:12px;flex-wrap:wrap}
 .rg.is-fertig .rg__nochmal{display:flex}
 .rg__nochmal .btn--ghost{color:#fff}
@@ -1460,9 +1464,9 @@ html.menu-offen .mobile-cta,html.menu-offen .kontakt{display:none}
   bahn.addEventListener('transitionend',function(e){if(e.target.classList&&e.target.classList.contains('rg__knoten')&&e.propertyName==='transform')linieZeichnen();});
   window.addEventListener('resize',function(){if(schritte.length)linieZeichnen();});
   function zuruecksetzen(){schritte=[];titel=null;[].forEach.call(bahn.querySelectorAll('.rg__knoten'),function(k){k.remove();});linie.innerHTML='';
-    sec.classList.remove('is-fertig','is-rechnung','is-fehler');anf&&anf.classList.remove('is-offen');document.getElementById('rgCta').disabled=true;document.getElementById('rgHebel').textContent='';document.getElementById('rgQuick').textContent='';
+    sec.classList.remove('is-fertig','is-rechnung','is-fehler','is-leer');anf&&anf.classList.remove('is-offen');document.getElementById('rgCta').disabled=true;document.getElementById('rgHebel').textContent='';document.getElementById('rgQuick').textContent='';
     document.getElementById('rgName').innerHTML='&nbsp;';document.getElementById('rgBereich').textContent='KI analysiert …';ziele={};}
-  function fehlerZeigen(t){sec.classList.add('is-fehler','is-fertig');fehler.textContent=t;status.textContent='Unterbrochen';}
+  function fehlerZeigen(t){sec.classList.add('is-fehler','is-fertig');sec.classList.toggle('is-leer',!schritte.length);fehler.textContent=t;status.textContent='Unterbrochen';}
   function zeile(o){
     if(o.t==='titel'){titel=o;document.getElementById('rgName').textContent=o.titel;document.getElementById('rgBereich').textContent=o.bereich||'Ablauf';
       faelle.value=Math.max(1,Math.min(500,Math.round(o.faelle_pro_woche)));
