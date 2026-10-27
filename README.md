@@ -52,6 +52,8 @@ Beide laufen über die eigene Domain (`/api/ki-roentgen.php`, `/api/diktat.php`)
 - Das KI-Röntgen streamt das Ergebnis als NDJSON: Claude schreibt eine JSON-Zeile pro Ereignis (Titel, Schritte, Hebel, Quick Win), `api/ki-roentgen.php` prüft und bereinigt jede Zeile, bevor sie an den Browser geht.
 - Anfragelimit je Besucher: 12 Röntgen- und 40 Diktat-Aufrufe pro Stunde, insgesamt 1.500 bzw. 3.000 pro Tag (`api/daten/ki-limit.json`, nur ein täglich wechselnder Hash der IP).
 - Die Röntgen-Beschreibungen landen ohne IP in `api/daten/ki-roentgen/JJJJ-MM.ndjson` und werden nach 12 Monaten gelöscht (siehe Datenschutzerklärung, Abschnitt 23). Diktate werden nicht gespeichert.
+- Nach jedem Röntgen-Lauf geht eine Mail mit Eingabe und Ergebnis an denselben Empfänger wie die Anfragen (`MAIL_TO`, sonst `SMTP_USER`), ebenfalls ohne IP. Abgelehnte Läufe (Anfragelimit) lösen keine Mail aus.
+- Unpassende Eingaben (nichts mit Arbeit im Betrieb zu tun, beleidigend usw.) beantwortet die Seite mit einem festen Hinweis, dass MakeMyKI dafür der falsche Ansprechpartner ist (`FALSCHER_ANSPRECHPARTNER` in `api/ki-roentgen.php`).
 
 ## Besucherstatistik und Wochenbericht
 
