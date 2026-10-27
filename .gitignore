@@ -6,3 +6,6 @@ api/daten/*
 !api/daten/.htaccess
 statistik/daten/*
 !statistik/daten/.htaccess
+
+# Composer-Pakete (werden beim Docker-Build installiert)
+vendor/

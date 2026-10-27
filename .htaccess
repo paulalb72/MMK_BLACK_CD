@@ -1,7 +1,7 @@
 Options -Indexes
 
 # Zugangsdaten und Hilfsdateien nie ausliefern
-<FilesMatch "^(\.env.*|mail\.php)$">
+<FilesMatch "^(\.env.*|mail\.php|claude\.php|composer\.(json|lock))$">
 <IfModule mod_authz_core.c>
 Require all denied
 </IfModule>
@@ -26,6 +26,8 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
 # Dateiliste der Bilder nicht direkt ausliefern, nur über /bild/?n=
 RewriteRule ^bild/img/ - [R=404,L]
+# Composer-Pakete (lokal im Projektordner) nie ausliefern
+RewriteRule ^vendor/ - [R=404,L]
 </IfModule>
 
 # Alte Leistungsseiten (bis 23.10.2026) auf die neuen umleiten

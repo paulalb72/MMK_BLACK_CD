@@ -1,0 +1,16 @@
+{
+    "name": "makemyki/website",
+    "description": "makemyki.de – PHP-Abhängigkeiten (KI-Röntgen und Diktat über die Claude API)",
+    "type": "project",
+    "require": {
+        "php": ">=8.3",
+        "anthropic-ai/sdk": "^1.3",
+        "guzzlehttp/guzzle": "^8.3"
+    },
+    "config": {
+        "platform": {
+            "php": "8.3.0"
+        },
+        "sort-packages": true
+    }
+}
