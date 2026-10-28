@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Referenzen | MakeMyKI</title>
-<meta name="description" content="Echte Automatisierungs- und KI-Projekte: Tonnenservice-Planung, datenbasierte Angebote, Website-Sales-Agent, Ticketautomatik.">
+<meta name="description" content="Echte Automatisierungs- und KI-Projekte: Terminkoordination mit Handwerkern, KI-Telefonassistent, Website-Sales-Agent.">
 <meta property="og:title" content="Referenzen | MakeMyKI">
-<meta property="og:description" content="Echte Automatisierungs- und KI-Projekte: Tonnenservice-Planung, datenbasierte Angebote, Website-Sales-Agent, Ticketautomatik.">
+<meta property="og:description" content="Echte Automatisierungs- und KI-Projekte: Terminkoordination mit Handwerkern, KI-Telefonassistent, Website-Sales-Agent.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://makemyki.de/referenzen/">
 <meta property="og:locale" content="de_DE">
@@ -836,7 +836,7 @@ img.avatar{object-fit:cover;padding:0}
 @media (prefers-reduced-motion:reduce){.rg__knoten,.rg__panel{transition:none}.rg canvas.rg__feld{display:none}}
 
 /* Referenzen: Übersicht im Hero, einheitliches Raster je Fall */
-.ref-index{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:40px}
+.ref-index{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:40px}
 .ref-card{display:grid;align-content:start;gap:10px;padding:22px;border:1px solid var(--line);border-radius:var(--radius);background:#fff;color:var(--body);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
 .ref-card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--accent-soft);color:var(--body)}
 .ref-card__marke{height:32px;display:flex;align-items:center}
@@ -874,8 +874,9 @@ img.avatar{object-fit:cover;padding:0}
 .study__flow li b{width:28px;height:28px;display:grid;place-items:center;border-radius:50%;background:var(--ink);color:#fff;font-family:var(--font-btn);font-size:13px}
 .study__flow li strong{display:block;font-family:var(--font-head);font-size:15px;line-height:1.35;color:var(--ink)}
 .study__flow li span{display:block;font-size:14px;line-height:1.5;color:var(--muted)}
-@media (max-width:1040px){.ref-index{grid-template-columns:repeat(2,minmax(0,1fr))}.study__body{grid-template-columns:1fr}}
-@media (max-width:600px){.ref-index{grid-template-columns:1fr}.study{padding-block:48px}.study__head{grid-template-columns:1fr;align-items:start}.study__kpi{text-align:left}}
+@media (max-width:1040px){.study__body{grid-template-columns:1fr}}
+@media (max-width:800px){.ref-index{grid-template-columns:1fr}}
+@media (max-width:600px){.study{padding-block:48px}.study__head{grid-template-columns:1fr;align-items:start}.study__kpi{text-align:left}}
 
 /* "Live testen"/Textlink auf Höhe des Buttons, nicht mittig zu Button + Microcopy */
 @media (min-width:521px){.hero__actions{align-items:flex-start}.hero__actions > .textlink{min-height:calc(18px*1.2 + 38px)}}
@@ -1104,29 +1105,29 @@ html.menu-offen .mobile-cta,html.menu-offen .kontakt{display:none}
 <main>
 <section class="page-hero ref-hero"><div class="wrap">
   <div class="page-hero__copy" style="max-width:760px"><p class="crumbs"><a href="/">Start</a> / Referenzen</p><h1 class="rise">Echte Projekte. Messbare Ergebnisse.</h1><p class="lead rise">So unterstützt MakeMyKI kleine und mittelständische Unternehmen dabei, Abläufe zu automatisieren und KI sinnvoll in den Alltag zu bringen.</p></div>
-  <nav class="ref-index" aria-label="Projekte im Überblick"><a class="ref-card" href="#hd"><span class="ref-card__marke"><img class="ref-logo" src="/bild/?n=ref-hd" alt="Hausmeisterdienst HD" loading="lazy" height="32"></span><strong class="ref-card__kpi">12 Tage<small>pro Jahr gespart</small></strong><span class="ref-card__titel">Vollautomatische Planung des Tonnenservice</span><span class="ref-card__kunde">Hausmeisterdienst HD · Hausmeisterservice</span></a><a class="ref-card" href="#rosenhof"><span class="ref-card__marke"><img class="ref-logo" src="/bild/?n=ref-rosenhof" alt="Weingut Rosenhof" loading="lazy" height="32"></span><strong class="ref-card__kpi">+11<small>Bestellungen in 12 Wochen</small></strong><span class="ref-card__titel">Personalisierte, datenbasierte Angebote für ein Weingut</span><span class="ref-card__kunde">Weingut Rosenhof · Weingut</span></a><a class="ref-card" href="#makemypage"><span class="ref-card__marke"><img class="ref-logo" src="/bild/?n=logo-makemypage" alt="MakeMyPage" loading="lazy" height="32"></span><strong class="ref-card__kpi">~15 Min<small>bis zum Demo-Link</small></strong><span class="ref-card__titel">Automatischer Website-Sales-Agent</span><span class="ref-card__kunde">MakeMyPage · Agentur</span></a><a class="ref-card" href="#postfach"><span class="ref-card__marke"><span class="ref-icon" aria-hidden="true"><svg class="i"><use href="#i-inbox"/></svg></span></span><strong class="ref-card__kpi">0<small>Mails, die liegen bleiben</small></strong><span class="ref-card__titel">Aus Kundenmails werden Aufgaben mit Frist</span><span class="ref-card__kunde">MakeMyGroup · Dienstleistung</span></a></nav>
+  <nav class="ref-index" aria-label="Projekte im Überblick"><a class="ref-card" href="#hd"><span class="ref-card__marke"><img class="ref-logo" src="/bild/?n=ref-hd" alt="Hausmeisterdienst HD" loading="lazy" height="32"></span><strong class="ref-card__kpi">5 Std.<small>pro Woche gespart</small></strong><span class="ref-card__titel">Termine mit Handwerkern und Dienstleistern koordiniert</span><span class="ref-card__kunde">Hausmeisterdienst HD · Hausmeisterservice</span></a><a class="ref-card" href="#rosenhof"><span class="ref-card__marke"><img class="ref-logo" src="/bild/?n=ref-rosenhof" alt="Weingut Rosenhof" loading="lazy" height="32"></span><strong class="ref-card__kpi">24/7<small>telefonisch erreichbar</small></strong><span class="ref-card__titel"><span class="nw">KI-Telefonassistent</span> für Anrufe und Bestellungen</span><span class="ref-card__kunde">Weingut Rosenhof · Weingut</span></a><a class="ref-card" href="#makemypage"><span class="ref-card__marke"><img class="ref-logo" src="/bild/?n=logo-makemypage" alt="MakeMyPage" loading="lazy" height="32"></span><strong class="ref-card__kpi">~15 Min<small>bis zum Demo-Link</small></strong><span class="ref-card__titel">Automatischer Website-Sales-Agent</span><span class="ref-card__kunde">MakeMyPage · Agentur</span></a></nav>
 </div></section>
 <section class="section ref-studies"><div class="wrap">
 <article class="study" id="hd" aria-labelledby="hd-titel">
-  <header class="study__head reveal"><div><p class="study__meta"><img class="ref-logo" src="/bild/?n=ref-hd" alt="Hausmeisterdienst HD" loading="lazy" height="32"><span>Hausmeisterdienst HD · Hausmeisterservice</span></p><h2 id="hd-titel">Vollautomatische Planung des Tonnenservice</h2></div><p class="study__kpi">12 Tage<small>pro Jahr gespart</small></p></header>
+  <header class="study__head reveal"><div><p class="study__meta"><img class="ref-logo" src="/bild/?n=ref-hd" alt="Hausmeisterdienst HD" loading="lazy" height="32"><span>Hausmeisterdienst HD · Hausmeisterservice</span></p><h2 id="hd-titel">Termine mit Handwerkern und Dienstleistern koordiniert</h2></div><p class="study__kpi">5 Std.<small>pro Woche gespart</small></p></header>
   <div class="study__body">
     <div class="study__text reveal">
-      <div><p class="study__label">Ausgangslage</p><p>Bei jedem Feiertag mussten die Abholpläne für alle Liegenschaften von Hand verschoben werden.</p></div>
-      <div><p class="study__label">Lösung</p><p>Heute holt ein Workflow die Abfuhrtermine automatisch, wendet die Regeln jedes Objekts an und liefert den fertigen Wochenplan im gewohnten Excel-Format.</p></div>
-      <figure class="study__quote"><blockquote>„Durch die Automatisierung sparen wir 12 Tage im Jahr, weil wir bei Feiertagen nicht mehr manuell neu planen müssen. Die Lösung läuft zuverlässig und wir haben endlich den Kopf frei für andere Dinge.“</blockquote><figcaption><strong>Matthias</strong> · Geschäftsführer, Hausmeisterdienst HD</figcaption></figure>
+      <div><p class="study__label">Ausgangslage</p><p>Termine mit Handwerkern und anderen Dienstleistern wurden einzeln abgestimmt, und die zuständigen Mitarbeiter mussten jedes Mal extra informiert werden.</p></div>
+      <div><p class="study__label">Lösung</p><p>Ein eigenes Tool koordiniert heute die Termine mit Handwerkern und Dienstleistern und benachrichtigt automatisch die Mitarbeiter, die für das jeweilige Objekt zuständig sind.</p></div>
+      <figure class="study__quote"><blockquote>„Früher haben wir jedem Handwerkertermin hinterhertelefoniert und danach noch das Team informiert. Heute läuft das über ein Tool, und alle Zuständigen wissen automatisch Bescheid. Das spart uns jede Woche Stunden.“</blockquote><figcaption><strong>Matthias</strong> · Geschäftsführer, Hausmeisterdienst HD</figcaption></figure>
     </div>
-    <div class="study__flow reveal"><p class="study__label">So funktioniert der Workflow</p><ol><li><b>1</b><div><strong>Objekte &amp; Regeln</strong><span>Liegenschaften mit objektspezifischen Regeln hinterlegen</span></div></li><li><b>2</b><div><strong>Kalenderabruf</strong><span>Automatischer Import aller Abfuhrtermine als .ics</span></div></li><li><b>3</b><div><strong>Plangenerierung</strong><span>Wochenpläne je Kalenderwoche unter Berücksichtigung aller Regeln</span></div></li><li><b>4</b><div><strong>Automatische Prüfung</strong><span>Abgleich mit dem Standardplan: Verschiebungen durch Feiertage?</span></div></li><li><b>5</b><div><strong>Planbereitstellung</strong><span>Fertiger Plan im bestehenden Excel-Format</span></div></li></ol></div>
+    <div class="study__flow reveal"><p class="study__label">So funktioniert das Tool</p><ol><li><b>1</b><div><strong>Auftrag erfassen</strong><span>Objekt und Anliegen werden im Tool angelegt</span></div></li><li><b>2</b><div><strong>Dienstleister zuordnen</strong><span>Der passende Handwerker oder Dienstleister wird ausgewählt</span></div></li><li><b>3</b><div><strong>Termin koordinieren</strong><span>Der Termin wird abgestimmt und zentral festgehalten</span></div></li><li><b>4</b><div><strong>Team benachrichtigen</strong><span>Die zuständigen Mitarbeiter erhalten automatisch Bescheid</span></div></li></ol></div>
   </div>
 </article>
 <article class="study" id="rosenhof" aria-labelledby="rosenhof-titel">
-  <header class="study__head reveal"><div><p class="study__meta"><img class="ref-logo" src="/bild/?n=ref-rosenhof" alt="Weingut Rosenhof" loading="lazy" height="32"><span>Weingut Rosenhof · Weingut</span></p><h2 id="rosenhof-titel">Personalisierte, datenbasierte Angebote für ein Weingut</h2></div><p class="study__kpi">+11<small>Bestellungen in 12 Wochen</small></p></header>
+  <header class="study__head reveal"><div><p class="study__meta"><img class="ref-logo" src="/bild/?n=ref-rosenhof" alt="Weingut Rosenhof" loading="lazy" height="32"><span>Weingut Rosenhof · Weingut</span></p><h2 id="rosenhof-titel"><span class="nw">KI-Telefonassistent</span> für Anrufe und Bestellungen</h2></div><p class="study__kpi">24/7<small>telefonisch erreichbar</small></p></header>
   <div class="study__body">
     <div class="study__text reveal">
-      <div><p class="study__label">Ausgangslage</p><p>Bestellungen, Kundenstamm und Notizen lagen in verschiedenen Systemen.</p></div>
-      <div><p class="study__label">Lösung</p><p>Jetzt erkennt ein <span class="nw">KI-Workflow</span> jede Woche, welche Kunden gerade einen Anlass für eine Bestellung haben, und schreibt den passenden Angebotsentwurf vor. Das Team prüft und schickt ab.</p></div>
-      <figure class="study__quote"><blockquote>„Wir bekommen jetzt jede Woche eine konkrete Liste mit passenden Kunden, dem jeweiligen Anlass und einem fertigen Angebotsentwurf. In den ersten zwölf Wochen sind daraus elf zusätzliche Bestellungen entstanden.“</blockquote><figcaption><strong>Franziska</strong> · Vertrieb, Weingut Rosenhof</figcaption></figure>
+      <div><p class="study__label">Ausgangslage</p><p>Außerhalb der Geschäftszeiten und wenn gerade niemand ans Telefon konnte, blieben Anrufe unbeantwortet, und mit ihnen so manche Bestellung.</p></div>
+      <div><p class="study__label">Lösung</p><p>Ein <span class="nw">KI-Telefonassistent</span> nimmt nach Feierabend und immer dann ab, wenn gerade keiner rangehen kann. Eine App zeigt dem Team zu jedem Anruf, worum es ging, und Bestellungen nimmt der Assistent direkt auf.</p></div>
+      <figure class="study__quote"><blockquote>„Früher sind Anrufe am Abend und am Wochenende einfach verloren gegangen. Jetzt geht der Assistent ran, und in der App sehen wir sofort, worum es ging. Bestellungen kommen sogar direkt fertig rein.“</blockquote><figcaption><strong>Franziska</strong> · Vertrieb, Weingut Rosenhof</figcaption></figure>
     </div>
-    <div class="study__flow reveal"><p class="study__label">So funktioniert der Workflow</p><ol><li><b>1</b><div><strong>Datenanbindung</strong><span><span class="nw">ERP-Bestellungen,</span> Kundenstamm, <span class="nw">E-Mails</span> und Notizen verbinden</span></div></li><li><b>2</b><div><strong>Kundenlogik</strong><span>Regeln für Wiederkäufer, Lieblingsweine und Anlässe festlegen</span></div></li><li><b>3</b><div><strong><span class="nw">KI-Vorschläge</span></strong><span>Kunden mit passendem Angebotszeitpunkt erkennen</span></div></li><li><b>4</b><div><strong>Angebotsentwurf</strong><span>Persönliche <span class="nw">E-Mail</span> mit Empfehlung und Preis vorbereiten</span></div></li><li><b>5</b><div><strong>Freigabe &amp; Auswertung</strong><span>Vorschlag prüfen, Angebot senden, Ergebnis messen</span></div></li></ol></div>
+    <div class="study__flow reveal"><p class="study__label">So funktioniert der Assistent</p><ol><li><b>1</b><div><strong>Anruf annehmen</strong><span>Nach Feierabend oder wenn gerade niemand rangehen kann</span></div></li><li><b>2</b><div><strong>Anliegen klären</strong><span>Der Assistent findet im Gespräch heraus, worum es geht</span></div></li><li><b>3</b><div><strong>Bestellung aufnehmen</strong><span>Weine, Mengen und Kontaktdaten werden direkt erfasst</span></div></li><li><b>4</b><div><strong>Info per App</strong><span>Das Team sieht zu jedem Anruf Thema und Zusammenfassung</span></div></li></ol></div>
   </div>
 </article>
 <article class="study" id="makemypage" aria-labelledby="makemypage-titel">
@@ -1138,17 +1139,6 @@ html.menu-offen .mobile-cta,html.menu-offen .kontakt{display:none}
       <figure class="study__quote"><blockquote>„Ich sende dem Agenten einfach eine Website-URL per Telegram. Etwa fünfzehn Minuten später bekomme ich einen Demo-Link mit einem kompletten Redesign-Vorschlag.“</blockquote><figcaption><strong>Thorben</strong> · Gründer, MakeMyPage</figcaption></figure>
     </div>
     <div class="study__flow reveal"><p class="study__label">So funktioniert der Workflow</p><ol><li><b>1</b><div><strong>URL per Telegram</strong><span>Eine Kundenwebsite wird an den Agenten geschickt</span></div></li><li><b>2</b><div><strong>Website-Analyse</strong><span>Ein Sprachmodell prüft Struktur, Inhalt, Design und Anfragepotenzial</span></div></li><li><b>3</b><div><strong>Redesign-Prompt</strong><span>Aus der Analyse entsteht ein konkreter Entwurfsauftrag</span></div></li><li><b>4</b><div><strong><span class="nw">KI-Redesign</span></strong><span>Daraus entsteht automatisch eine neue Website-Demo</span></div></li><li><b>5</b><div><strong>Demo-Link zurück</strong><span>Der fertige Link kommt per Telegram für den Vertrieb</span></div></li></ol></div>
-  </div>
-</article>
-<article class="study" id="postfach" aria-labelledby="postfach-titel">
-  <header class="study__head reveal"><div><p class="study__meta"><span class="ref-icon" aria-hidden="true"><svg class="i"><use href="#i-inbox"/></svg></span><span>MakeMyGroup · Dienstleistung</span></p><h2 id="postfach-titel">Aus Kundenmails werden Aufgaben mit Frist</h2></div><p class="study__kpi">0<small>Mails, die liegen bleiben</small></p></header>
-  <div class="study__body">
-    <div class="study__text reveal">
-      <div><p class="study__label">Ausgangslage</p><p>In der Gruppe kommen täglich Kundenmails mit Änderungswünschen an.</p></div>
-      <div><p class="study__label">Lösung</p><p>Eine KI liest jede Mail, erkennt den Kunden, legt ein Ticket mit Frist und Zuständigkeit an oder ergänzt ein bestehendes. Gesprächsprotokolle werden mit einem Klick zu Aufgaben.</p></div>
-      
-    </div>
-    <div class="study__flow reveal"><p class="study__label">So funktioniert der Workflow</p><ol><li><b>1</b><div><strong>Postfach lesen</strong><span>Neue Mails werden regelmäßig abgerufen</span></div></li><li><b>2</b><div><strong>Kunde erkennen</strong><span>Absender, Domain und Inhalt werden dem richtigen Kunden zugeordnet</span></div></li><li><b>3</b><div><strong>Aufgabe ableiten</strong><span>Die KI formuliert Titel, Beschreibung, Priorität und Frist</span></div></li><li><b>4</b><div><strong>Ticket oder Notiz</strong><span>Neues Ticket oder Ergänzung zu einem offenen</span></div></li><li><b>5</b><div><strong>Zuständigkeit</strong><span>Die Aufgabe landet bei der richtigen Person</span></div></li></ol></div>
   </div>
 </article>
 </div></section>
