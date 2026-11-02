@@ -766,11 +766,13 @@ img.avatar{object-fit:cover;padding:0}
 .profile__tags li{padding:5px 12px;border:1px solid var(--line);border-radius:60px;background:#fff;font-family:var(--font-btn);font-weight:700;font-size:13px;line-height:1.4;color:var(--ink)}
 @media (max-width:1040px){.about{grid-template-columns:1fr;gap:40px}.about__intro{position:static}}
 @media (max-width:600px){.profile{grid-template-columns:64px minmax(0,1fr);grid-template-areas:"bild kopf" "text text" "tags tags";column-gap:16px;row-gap:14px;align-items:center;padding:24px 0}.profile img{width:64px;border-radius:12px}.profile h3{font-size:20px}}
-/* Hero zentriert wie auf vinophon.de: Headline, Text und Buttons mittig untereinander */
-.hero{padding-block:clamp(72px,11vh,120px) clamp(80px,12vh,128px)}
+/* Hero zentriert wie auf vinophon.de: Headline, Text und Buttons mittig untereinander.
+   Füllt beim Laden genau den sichtbaren Bereich unter Promo-Leiste und Header (--hero-top per Skript) */
+.hero{min-height:calc(100vh - var(--hero-top,0px));min-height:calc(100svh - var(--hero-top,0px));display:flex;align-items:center;padding-block:clamp(40px,8vh,96px)}
+.hero > .wrap{width:100%}
 .hero__grid{grid-template-columns:minmax(0,1fr)}
 .hero__copy{justify-items:center;text-align:center;gap:0}
-.hero h1{font-size:clamp(44px,5.4vw,78px);line-height:1.08;letter-spacing:-.045em}
+.hero h1{font-size:clamp(38px,min(4.2vw,7.4vh),60px);line-height:1.08;letter-spacing:-.04em}
 .hero .lead{color:var(--muted);font-size:clamp(17px,1.3vw,19px);max-width:780px;margin:26px auto 32px;text-wrap:pretty}
 @media (max-width:860px){.hero__umbruch{display:none}}
 .hero__actions{justify-content:center;gap:12px}
@@ -1181,6 +1183,8 @@ html.menu-offen .mobile-cta,html.menu-offen .kontakt{display:none}
 </section><script>
 (function(){
   var hero=document.querySelector('.hero');if(!hero)return;
+  function setze(){document.documentElement.style.setProperty('--hero-top',Math.round(hero.getBoundingClientRect().top+window.scrollY)+'px');}
+  setze();document.addEventListener('DOMContentLoaded',setze);window.addEventListener('load',setze);window.addEventListener('resize',setze);
   // Headline tippen: Text in einzelne Zeichen zerlegen und nacheinander einblenden (Platz bleibt reserviert)
   var h=hero.querySelector('.type');if(!h||!document.documentElement.classList.contains('tippen'))return;
   var box=h.querySelector('.type__text'),zeichen=[];
@@ -1198,14 +1202,13 @@ html.menu-offen .mobile-cta,html.menu-offen .kontakt{display:none}
 </script><section class="rg section" id="ki-roentgen" aria-labelledby="rgTitel">
   <canvas class="rg__feld" id="rgFeld" aria-hidden="true"></canvas>
   <div class="wrap">
-    <div class="section-head reveal" style="margin-bottom:28px"><span class="rg__live"><i></i>Live-KI · probier es aus</span><h2 id="rgTitel">Das <span class="nw">KI-Röntgen</span> für deinen Zeitfresser.</h2>
+    <div class="section-head reveal" style="margin-bottom:28px"><h2 id="rgTitel">Das <span class="nw">KI-Röntgen</span> für deinen Zeitfresser.</h2>
       <p class="lead">Beschreib einen Ablauf, der dein Team nervt. Unsere KI zerlegt ihn live in Schritte, zeigt, wo Automatisierung und KI übernehmen, und rechnet aus, was das im Jahr spart. In 20 Sekunden, kostenlos.</p></div>
     <form class="rg__eingabe reveal" id="rgForm" autocomplete="off">
       <label class="sr-only" for="rgText">Dein Ablauf in einem Satz</label>
       <div class="rg__box"><textarea id="rgText" rows="1" maxlength="600" placeholder="z. B. Wir tippen jede Bestellung aus der E-Mail von Hand ins ERP ab …"></textarea>
         <button type="button" class="rg__mic" id="rgMic" aria-label="Ablauf einsprechen" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v5"/></svg></button>
         <button type="submit" class="btn btn--primary rg__los" id="rgLos">Röntgen starten <svg class="i"><use href="#i-arrow"/></svg></button></div>
-      <div class="rg__chips" aria-label="Beispiele"><button type="button" data-rg-bsp>Wir tippen Bestellungen aus <span class="nw">E-Mails</span> von Hand ins ERP ab.</button><button type="button" data-rg-bsp>Jedes Angebot schreiben wir neu aus Word-Vorlagen und Excel-Preislisten.</button><button type="button" data-rg-bsp>Eingangsrechnungen prüfen, abtippen und an die Buchhaltung weiterleiten.</button><button type="button" data-rg-bsp>Wir planen Einsätze unserer Monteure jede Woche per Telefon und Excel neu.</button><button type="button" data-rg-bsp>Kundenanfragen per Mail beantworten, oft mit denselben Fragen.</button></div>
       <p class="rg__hinweis">Bitte keine Namen oder vertraulichen Daten eingeben. Die Beschreibung wird zur Auswertung an ein <span class="nw">KI-Modell</span> (Anthropic) übermittelt. <a href="/datenschutz/#ki-roentgen" style="color:inherit;text-decoration:underline">Datenschutz</a></p>
     </form>
     <div class="rg__buehne" id="rgBuehne" aria-live="polite">
@@ -1372,7 +1375,6 @@ html.menu-offen .mobile-cta,html.menu-offen .kontakt{display:none}
   function hoehe(){ta.style.height='auto';var h=ta.scrollHeight;ta.style.height=Math.min(180,h)+'px';ta.style.overflowY=h>180?'auto':'hidden';}
   ta.addEventListener('input',hoehe);hoehe();window.addEventListener('load',hoehe);
   ta.addEventListener('keydown',function(e){if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();form.requestSubmit?form.requestSubmit():los.click();}});
-  [].forEach.call(document.querySelectorAll('[data-rg-bsp]'),function(b){b.addEventListener('click',function(){ta.value=b.textContent;hoehe();starten();});});
   // Spracheingabe (Browser-Spracherkennung, wo verfuegbar)
   var SR=window.SpeechRecognition||window.webkitSpeechRecognition, mic=document.getElementById('rgMic');
   if(SR){mic.hidden=false;var rec=null;mic.addEventListener('click',function(){
