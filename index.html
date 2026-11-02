@@ -1181,10 +1181,9 @@ html.menu-offen .mobile-cta,html.menu-offen .kontakt{display:none}
   <div class="wrap hero__grid">
     <div class="hero__copy">
       <h1 class="rise type" aria-label="Mehr Unternehmer, weniger Verwalter."><span class="type__text" aria-hidden="true">Mehr Unternehmer,<br><em>weniger <span class="type__strike">Verwalter</span>.</em></span></h1>
-      <p class="lead rise">Wir finden die Abläufe, die dich und dein Team jeden Tag Stunden kosten, und automatisieren sie. Für kleine und mittelständische Unternehmen aus <span class="nw">Rheinland-Pfalz.</span> Spart es dir nach 90 Tagen nichts, gibt’s dein Geld zurück.</p>
+      <p class="lead rise">Wir automatisieren Abläufe, die dich und dein Team jeden Tag Stunden kosten. Spart es dir nach 90 Tagen nichts, gibt’s dein Geld zurück.</p>
       <div class="hero__actions rise">
         <div><a class="btn btn--primary" href="https://calendly.com/makemyki-info" target="_blank" rel="noopener">Erstgespräch buchen <svg class="i"><use href="#i-arrow"/></svg></a><p class="microcopy" style="margin-top:10px">30 Minuten · kostenlos · online</p></div>
-        <a class="textlink textlink--runter" href="#ki-roentgen"><span>Live testen: <span class="nw">KI-Röntgen</span></span> <svg class="i"><use href="#i-arrow"/></svg></a>
       </div>
     </div>
     <div class="flow-wrap rise">
@@ -1220,60 +1219,7 @@ html.menu-offen .mobile-cta,html.menu-offen .kontakt{display:none}
     setTimeout(function(){strike.classList.add('is-struck');box.classList.add('ist-fertig');box.classList.add('ist-fertig');box.classList.add('ist-fertig');box.classList.add('ist-fertig');setTimeout(function(){cursor.classList.add('is-aus');},1800);},600);}
   setTimeout(tippe,750);
 })();
-</script><section class="rg section" id="ki-roentgen" aria-labelledby="rgTitel">
-  <canvas class="rg__feld" id="rgFeld" aria-hidden="true"></canvas>
-  <div class="wrap">
-    <div class="section-head reveal" style="margin-bottom:28px"><span class="rg__live"><i></i>Live-KI · probier es aus</span><h2 id="rgTitel">Das <span class="nw">KI-Röntgen</span> für deinen Zeitfresser.</h2>
-      <p class="lead">Beschreib einen Ablauf, der dein Team nervt. Unsere KI zerlegt ihn live in Schritte, zeigt, wo Automatisierung und KI übernehmen, und rechnet aus, was das im Jahr spart. In 20 Sekunden, kostenlos.</p></div>
-    <form class="rg__eingabe reveal" id="rgForm" autocomplete="off">
-      <label class="sr-only" for="rgText">Dein Ablauf in einem Satz</label>
-      <div class="rg__box"><textarea id="rgText" rows="1" maxlength="600" placeholder="z. B. Wir tippen jede Bestellung aus der E-Mail von Hand ins ERP ab …"></textarea>
-        <button type="button" class="rg__mic" id="rgMic" aria-label="Ablauf einsprechen" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v5"/></svg></button>
-        <button type="submit" class="btn btn--primary rg__los" id="rgLos">Röntgen starten <svg class="i"><use href="#i-arrow"/></svg></button></div>
-      <div class="rg__chips" aria-label="Beispiele"><button type="button" data-rg-bsp>Wir tippen Bestellungen aus <span class="nw">E-Mails</span> von Hand ins ERP ab.</button><button type="button" data-rg-bsp>Jedes Angebot schreiben wir neu aus Word-Vorlagen und Excel-Preislisten.</button><button type="button" data-rg-bsp>Eingangsrechnungen prüfen, abtippen und an die Buchhaltung weiterleiten.</button><button type="button" data-rg-bsp>Wir planen Einsätze unserer Monteure jede Woche per Telefon und Excel neu.</button><button type="button" data-rg-bsp>Kundenanfragen per Mail beantworten, oft mit denselben Fragen.</button></div>
-      <p class="rg__hinweis">Bitte keine Namen oder vertraulichen Daten eingeben. Die Beschreibung wird zur Auswertung an ein <span class="nw">KI-Modell</span> (Anthropic) übermittelt. <a href="/datenschutz/#ki-roentgen" style="color:inherit;text-decoration:underline">Datenschutz</a></p>
-    </form>
-    <div class="rg__buehne" id="rgBuehne" aria-live="polite">
-      <div class="rg__kopf"><div class="rg__titel" id="rgTitelAus"><small id="rgBereich">KI analysiert …</small><span id="rgName">&nbsp;</span></div><div class="rg__status"><span class="rg__scan"></span><span id="rgStatus">Ablauf wird zerlegt</span></div></div>
-      <div class="rg__grid">
-        <div class="rg__bahn" id="rgBahn"><svg class="rg__linie" id="rgLinie" aria-hidden="true"></svg></div>
-        <aside class="rg__panel" id="rgPanel">
-          <span class="kicker-line">Ersparnis pro Jahr</span>
-          <p class="rg__gross"><span id="rgStd">0</span> Std.<small>≈ <span id="rgEur">0</span> € Arbeitszeit</small></p>
-          <div class="rg__zahlen"><div><strong id="rgVorher">0</strong><span>Minuten je Fall heute</span></div><div><strong id="rgNachher">0</strong><span>Minuten je Fall danach</span></div><div><strong id="rgProzent">0 %</strong><span>weniger Handarbeit</span></div><div><strong id="rgTage">0</strong><span>Arbeitstage pro Jahr</span></div></div>
-          <div class="rg__regler">
-            <label for="rgFaelle"><span>Fälle pro Woche <output id="rgFaelleAus">20</output></span><input type="range" id="rgFaelle" min="1" max="500" value="20"></label>
-            <label for="rgSatz"><span>Kosten je Arbeitsstunde <output id="rgSatzAus">45 €</output></span><input type="range" id="rgSatz" min="20" max="150" step="5" value="45"></label>
-          </div>
-          <p class="rg__annahme" id="rgAnnahme">Annahme: 46 Arbeitswochen pro Jahr. Schätzung der KI, keine Zusage.</p>
-          <button type="button" class="btn btn--primary" id="rgCta" disabled>Diesen Workflow bauen lassen <svg class="i"><use href="#i-arrow"/></svg></button>
-        </aside>
-      </div>
-      <div class="rg__hebel"><div><b>Größter Hebel</b><p id="rgHebel"></p></div><div><b>Quick Win für diese Woche</b><p id="rgQuick"></p></div></div>
-      <div class="rg__anfrage" id="rgAnfrage">
-        <h3>Fast fertig. Wohin dürfen wir uns melden?</h3>
-        <p>Deine Analyse geht automatisch mit. Wir prüfen sie und melden uns innerhalb eines Werktags mit einer ehrlichen Einschätzung, im November im Rahmen des kostenlosen <span class="nw">KI-Checks.</span></p>
-        <form id="rgAnfForm" method="post" action="/api/anfrage.php" novalidate>
-          <input type="hidden" name="formular" value="makemyki-roentgen">
-          <input type="hidden" name="anliegen" value="KI-Check: Workflow aus dem KI-Röntgen umsetzen">
-          <input type="hidden" name="ablauf" id="rgAblaufFeld" value="">
-          <div style="position:absolute;left:-9999px" aria-hidden="true"><label for="rg-hp">Website</label><input id="rg-hp" name="website_url" tabindex="-1" autocomplete="off"></div>
-          <div class="rg__mit" id="rgMit"></div>
-          <div class="form__row">
-            <label class="fld" for="rg-name"><span>Name</span><input type="text" id="rg-name" name="name" autocomplete="name" required></label>
-            <label class="fld" for="rg-mail"><span><span class="nw">E-Mail</span></span><input type="email" id="rg-mail" name="email" autocomplete="email" required></label>
-            <label class="fld" for="rg-tel"><span>Telefon <i>(optional)</i></span><input type="tel" id="rg-tel" name="telefon" autocomplete="tel"></label>
-          </div>
-          <label class="fld" for="rg-hinweis"><span>Sonstige Hinweise <i>(optional)</i></span><span class="dk"><textarea id="rg-hinweis" name="nachricht" placeholder="z. B. welche Software ihr nutzt oder wann es losgehen soll"></textarea><button type="button" class="dk__mic" id="rgDiktat" aria-label="Mikrofon gedrückt halten und diktieren" title="Gedrückt halten und diktieren" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></button></span><span class="dk__hint" id="rgDiktatHinweis" aria-live="polite" hidden>Mikrofon gedrückt halten und diktieren</span></label>
-          <label for="rg-ds" class="form__check"><input id="rg-ds" name="datenschutz" type="checkbox" value="ja" required><span>Ich bin einverstanden, dass meine Angaben und die Analyse zur Bearbeitung der Anfrage gespeichert werden. <a href="/datenschutz/" target="_blank" rel="noopener">Datenschutz</a></span></label>
-          <div class="rg__senden"><button type="submit" class="btn btn--primary" id="rgAnfSend">Anfrage absenden <svg class="i"><use href="#i-arrow"/></svg></button><span class="rg__err" id="rgAnfErr" role="alert" hidden></span></div>
-        </form>
-      </div>
-      <div class="rg__fehler" id="rgFehler"></div>
-      <div class="rg__nochmal"><button type="button" class="btn btn--ghost btn--sm" id="rgNeu">Anderen Ablauf röntgen</button><a class="btn btn--ghost btn--sm" href="https://calendly.com/makemyki-info" target="_blank" rel="noopener">Ergebnis im Erstgespräch besprechen</a></div>
-    </div>
-  </div>
-</section><section class="trust" aria-label="Einsatzbereiche"><div class="wrap trust__inner"><p class="trust__label">Wo wir automatisieren <span>Abläufe aus Projekten mit KMU im <span class="nw">DACH-Raum.</span></span></p><div class="marquee"><div class="marquee__track" id="marqueeTrack"><span><span class="nw">E-Mail</span> &amp; Postfach</span><span>Angebote</span><span>Rechnungen</span><span>Einsatzplanung</span><span>Dokumente &amp; PDFs</span><span>CRM &amp; Vertrieb</span><span>Kundenservice</span><span>Reporting</span><span>Bestellungen</span><span>Wissenssuche</span></div></div></div></section><section class="section" id="problem" aria-labelledby="problem-titel"><div class="wrap">
+</script><section class="section" id="problem" aria-labelledby="problem-titel"><div class="wrap">
   <div class="section-head reveal"><h2 id="problem-titel">Kommt dir das bekannt vor?</h2><p class="lead">In vielen Betrieben steckt ein großer Teil der Arbeitszeit in Aufgaben, die sich jeden Tag gleich wiederholen. Das kostet Zeit, Nerven und am Ende auch Kunden.</p></div>
   <div class="pains reveal">
     <article class="pain"><span class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 17H7a5 5 0 0 1 0-10h2"/><path d="M15 7h2a5 5 0 0 1 2.2 9.5"/><path d="M8 12h3"/><path d="M3 3l18 18"/></svg></span><h3>Programme ohne Verbindung</h3><p>Daten wandern von Hand zwischen <span class="nw">E-Mail</span>, Excel und Software.</p></article>
@@ -1289,7 +1235,7 @@ html.menu-offen .mobile-cta,html.menu-offen .kontakt{display:none}
     <article class="benefit reveal"><span class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></span><h3>Software, die zu deinen Abläufen passt</h3><p>Statt dich an starre Programme anzupassen, verbinden wir deine Werkzeuge so, dass sie deinem Ablauf folgen – nicht umgekehrt.</p></article>
     <article class="benefit reveal"><span class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l1.9 5.6L19.5 10.5l-5.6 1.9L12 18l-1.9-5.6L4.5 10.5l5.6-1.9z"/><path d="M19 3v4"/><path d="M17 5h4"/></svg></span><h3>KI, die im Alltag wirklich hilft</h3><p>Mehr als ein Chatfenster: KI liest <span class="nw">E-Mail</span>s, versteht Dokumente und bereitet Entwürfe vor – direkt in deinen Abläufen.</p></article>
   </div>
-  <div class="benefits-cta reveal"><a class="btn btn--primary" href="#erstgespraech">Kostenloses Erstgespräch <svg class="i"><use href="#i-arrow"/></svg></a><a class="textlink" href="/leistungen/">Konkrete Lösungen ansehen <svg class="i"><use href="#i-arrow"/></svg></a></div>
+  <div class="benefits-cta reveal"><a class="btn btn--primary" href="https://calendly.com/makemyki-info" target="_blank" rel="noopener">Kostenloses Erstgespräch <svg class="i"><use href="#i-arrow"/></svg></a><a class="textlink" href="/leistungen/">Konkrete Lösungen ansehen <svg class="i"><use href="#i-arrow"/></svg></a></div>
 </div></section><section class="section section--dark" id="ablaeufe" aria-labelledby="ablaeufe-titel"><div class="wrap">
   <div class="section-head section-head--split reveal"><div><h2 id="ablaeufe-titel">Die meisten Routineaufgaben lassen sich automatisieren.</h2></div><p class="lead">Ob vollständig automatisch oder mit <span class="nw">KI-Unterstützung:</span> Diese Abläufe begegnen uns in Betrieben immer wieder.</p></div>
   <ul class="tasks reveal">
@@ -1322,18 +1268,6 @@ html.menu-offen .mobile-cta,html.menu-offen .kontakt{display:none}
     <div class="road__step"><span>3</span><div><h3>Umsetzung: Automatisierung und KI im Einsatz.</h3><p>Wir binden die Lösung an deine Programme an, setzen KI dort ein, wo sie gebraucht wird, und testen mit echten Fällen, bevor dein Team sich darauf verlässt.</p></div></div>
     <div class="road__step"><span>4</span><div><h3>Schulung &amp; Betrieb: Dein Team übernimmt.</h3><p>Dein Team lernt den neuen Ablauf an den eigenen Aufgaben kennen – auf Wunsch mit Nachweis der <span class="nw">KI-Kompetenz</span> nach EU AI Act. Danach bleiben wir Ansprechpartner für Wartung und Weiterentwicklung.</p></div></div>
   </div>
-</div></section><section class="section section--dark" id="erstgespraech" aria-labelledby="erstgespraech-titel"><div class="wrap consult">
-  <div class="consult__copy reveal"><h2 id="erstgespraech-titel">Finden wir heraus, was sich bei dir automatisieren lässt.</h2><p class="lead">In etwa 30 Minuten per Video sprechen wir über deinen Alltag. Du gehst mit einer ehrlichen Einschätzung aus dem Gespräch, auch wenn wir danach nicht zusammenarbeiten.</p></div>
-  <div class="consult__card reveal">
-    <h3>Das nimmst du mit</h3>
-    <ul>
-      <li><svg class="i"><use href="#i-check"/></svg><span>Welche deiner Abläufe sich für eine Automatisierung eignen</span></li>
-      <li><svg class="i"><use href="#i-check"/></svg><span>Wo KI sinnvoll ist – und wo eine einfachere Lösung reicht</span></li>
-      <li><svg class="i"><use href="#i-check"/></svg><span>Womit du am besten anfängst und mit welchem Aufwand du grob rechnen kannst</span></li>
-    </ul>
-    <a class="btn btn--primary" href="https://calendly.com/makemyki-info" target="_blank" rel="noopener">Erstgespräch vereinbaren <svg class="i"><use href="#i-arrow"/></svg></a>
-    <p class="consult__note">Kostenlos und unverbindlich.</p>
-  </div>
 </div></section><script>
 (function(){
   // Vorgehen: Linie füllt sich beim Scrollen, erreichte Schritte werden aktiv (Schwelle: 70 % der Fensterhöhe)
@@ -1364,7 +1298,7 @@ html.menu-offen .mobile-cta,html.menu-offen .kontakt{display:none}
       <ul class="profile__tags"><li>Gründer von MakeMyPage</li><li>160+ Projekte in DE &amp; CH</li><li>Strategie &amp; Vertrieb</li><li>Google Ads · SEO · <span class="nw">E-Commerce</span></li></ul>
     </article>
   </div>
-</div></section><section class="section" id="anfrage"><div class="wrap anf__grid"><div class="anf__copy reveal"><h2>In 60 Sekunden zur Anfrage.</h2><p class="lead">Ein paar Zeilen genügen, dann melden wir uns. Kein Erstgespräch vorab nötig.</p><ul class="anf__list"><li><svg class="i"><use href="#i-check"/></svg><span>Kostenlos und unverbindlich</span></li><li><svg class="i"><use href="#i-check"/></svg><span>Antwort innerhalb eines Werktags</span></li><li data-bis="2026-12-01"><svg class="i"><use href="#i-check"/></svg><span>Im November: <span class="nw">KI-Check</span> gratis, nur 10 Plätze</span></li></ul><p class="microcopy">Lieber gleich reden? <a href="https://calendly.com/makemyki-info" target="_blank" rel="noopener">Erstgespräch buchen</a></p></div><form class="wiz anf-form reveal" id="anfrage-form" method="post" action="/api/anfrage.php" novalidate data-preset="">
+</div></section><section class="section" id="anfrage"><div class="wrap anf__grid"><div class="anf__copy reveal"><h2>In 60 Sekunden zur Anfrage.</h2><p class="lead">Ein paar Zeilen genügen, dann melden wir uns. Kein Erstgespräch vorab nötig.</p><ul class="anf__list"><li><svg class="i"><use href="#i-check"/></svg><span>Kostenlos und unverbindlich</span></li><li><svg class="i"><use href="#i-check"/></svg><span>Antwort innerhalb eines Werktags</span></li><li data-bis="2026-12-01"><svg class="i"><use href="#i-check"/></svg><span>Im November: <span class="nw">KI-Check</span> gratis, nur 10 Plätze</span></li></ul><div><p class="microcopy" style="margin:0 0 12px">Lieber gleich reden? 30 Minuten per Video, kostenlos.</p><a class="btn btn--outline" href="https://calendly.com/makemyki-info" target="_blank" rel="noopener">Erstgespräch buchen <svg class="i"><use href="#i-arrow"/></svg></a></div></div><form class="wiz anf-form reveal" id="anfrage-form" method="post" action="/api/anfrage.php" novalidate data-preset="">
   <input type="hidden" name="formular" value="makemyki">
   <div style="position:absolute;left:-9999px" aria-hidden="true"><label for="f-hp">Website</label><input id="f-hp" name="website_url" tabindex="-1" autocomplete="off"></div>
   <h3 class="anf-form__titel">Deine Anfrage</h3>
@@ -1394,207 +1328,7 @@ html.menu-offen .mobile-cta,html.menu-offen .kontakt{display:none}
     send.disabled=true;send.textContent='Wird gesendet …';
   });
 })();
-</script></div></section><section class="faq section section--tint" id="faq"><div class="wrap faq__grid"><div class="faq__aside reveal"><h2>Was du vor dem Gespräch wissen willst.</h2><p class="lead">Kurz und ohne Kleingedrucktes. Alles andere klären wir in 30 Minuten.</p><div><a class="btn btn--outline" href="https://calendly.com/makemyki-info" target="_blank" rel="noopener">Frage im Erstgespräch stellen</a></div></div><div class="faq__list reveal"><details open><summary>Was kostet eine Automatisierung?<svg class="i"><use href="#i-plus"/></svg></summary><p>Das hängt vom Ablauf ab. Kleine Workflows starten im niedrigen vierstelligen Bereich, laufende Kosten für Tools liegen oft bei wenigen Euro im Monat. Im <span class="nw">KI-Check</span> rechnen wir für jeden Hebel Aufwand und Ersparnis gegeneinander.</p></details><details><summary>Müssen wir unsere Software wechseln?<svg class="i"><use href="#i-plus"/></svg></summary><p>Nein. Wir verbinden, was schon da ist: <span class="nw">E-Mail,</span> Excel, Microsoft 365, Google, ERP, CRM oder Branchensoftware. Neue Tools nur, wenn sie sich klar lohnen.</p></details><details><summary>Wie schnell läuft der erste Ablauf?<svg class="i"><use href="#i-plus"/></svg></summary><p>Kleine Workflows laufen oft nach wenigen Tagen, größere Projekte nach wenigen Wochen. Wir starten bewusst klein und bauen dann aus.</p></details><details><summary>Was passiert mit unseren Daten?<svg class="i"><use href="#i-plus"/></svg></summary><p>Wir nutzen bevorzugt Anbieter mit Servern in der EU und Verträgen zur Auftragsverarbeitung. Sensible Daten verlassen dein System nur, wenn es dafür einen klaren Grund gibt. Und jeder Schritt bleibt nachvollziehbar.</p></details><details><summary>Ersetzt KI meine Mitarbeitenden?<svg class="i"><use href="#i-plus"/></svg></summary><p>Nein. Sie nimmt deinem Team Abtippen, Suchen und Sortieren ab. Entscheidungen und Freigaben bleiben bei Menschen. So arbeiten wir auch selbst.</p></details><details><summary>Was ist, wenn etwas nicht funktioniert?<svg class="i"><use href="#i-plus"/></svg></summary><p>Jeder Workflow meldet Fehler, statt still zu scheitern. Auf Wunsch betreuen wir die Abläufe dauerhaft und passen sie an, wenn sich etwas ändert.</p></details><details><summary><span>Was ist der <span class="nw">KI-Check</span> im November?</span><svg class="i"><use href="#i-plus"/></svg></summary><p>Ein kostenloser Workshop mit schriftlichem Fahrplan und einer Demo deines größten Hebels. Nur für Anfragen im November 2026 und nur 10 Plätze.</p></details><details><summary>Arbeitet ihr auch vor Ort?<svg class="i"><use href="#i-plus"/></svg></summary><p>Wir arbeiten digital im gesamten <span class="nw">DACH-Raum.</span> Für Workshops kommen wir in Rheinland-Pfalz und Umgebung auch gern vorbei.</p></details></div></div></section><script>
-(function(){
-  var API='/api/ki-roentgen.php';
-  var sec=document.getElementById('ki-roentgen'); if(!sec) return;
-  var form=document.getElementById('rgForm'), ta=document.getElementById('rgText'), los=document.getElementById('rgLos'),
-      bahn=document.getElementById('rgBahn'), linie=document.getElementById('rgLinie'), status=document.getElementById('rgStatus'),
-      fehler=document.getElementById('rgFehler'), faelle=document.getElementById('rgFaelle'), satz=document.getElementById('rgSatz');
-  var ICON={ki:'<path d="M12 3l1.9 5.6L19.5 10.5l-5.6 1.9L12 18l-1.9-5.6L4.5 10.5l5.6-1.9z"/>',auto:'<rect x="3" y="3" width="6" height="6" rx="1.5"/><rect x="15" y="15" width="6" height="6" rx="1.5"/><path d="M6 9v4a2 2 0 0 0 2 2h7"/>',mensch:'<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>'};
-  var WERTEXT={ki:'KI',auto:'Automatisch',mensch:'Mensch prüft'};
-  var schritte=[], titel=null, laeuft=false, reduziert=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
-  function fmt(n,d){return Number(n).toLocaleString('de-DE',{maximumFractionDigits:d||0,minimumFractionDigits:d||0});}
-  // Eingabefeld waechst mit
-  function hoehe(){ta.style.height='auto';var h=ta.scrollHeight;ta.style.height=Math.min(180,h)+'px';ta.style.overflowY=h>180?'auto':'hidden';}
-  ta.addEventListener('input',hoehe);hoehe();window.addEventListener('load',hoehe);
-  ta.addEventListener('keydown',function(e){if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();form.requestSubmit?form.requestSubmit():los.click();}});
-  [].forEach.call(document.querySelectorAll('[data-rg-bsp]'),function(b){b.addEventListener('click',function(){ta.value=b.textContent;hoehe();starten();});});
-  // Spracheingabe (Browser-Spracherkennung, wo verfuegbar)
-  var SR=window.SpeechRecognition||window.webkitSpeechRecognition, mic=document.getElementById('rgMic');
-  if(SR){mic.hidden=false;var rec=null;mic.addEventListener('click',function(){
-    if(rec){rec.stop();return;}
-    rec=new SR();rec.lang='de-DE';rec.interimResults=true;rec.continuous=false;var basis=ta.value?ta.value+' ':'';
-    rec.onresult=function(e){var t='';for(var i=0;i<e.results.length;i++)t+=e.results[i][0].transcript;ta.value=basis+t;hoehe();};
-    rec.onend=function(){mic.classList.remove('is-an');rec=null;if(ta.value.trim().length>15)starten();};
-    rec.onerror=function(){mic.classList.remove('is-an');rec=null;};
-    mic.classList.add('is-an');rec.start();});}
-  // Rechnung
-  function rechnen(){
-    var f=+faelle.value, s=+satz.value, v=0, n=0;
-    schritte.forEach(function(x){v+=x.min_vorher;n+=x.min_nachher;});
-    document.getElementById('rgFaelleAus').textContent=f;document.getElementById('rgSatzAus').textContent=s+' €';
-    var std=Math.max(0,(v-n)*f*46/60), eur=std*s;
-    zaehle('rgStd',std,0);zaehle('rgEur',Math.round(eur/10)*10,0);
-    document.getElementById('rgVorher').textContent=fmt(v,v<10?1:0);document.getElementById('rgNachher').textContent=fmt(n,n<10?1:0);
-    document.getElementById('rgProzent').textContent=(v>0?fmt(Math.round((v-n)/v*100)):0)+' %';
-    document.getElementById('rgTage').textContent=fmt(std/8,std/8<10?1:0);
-  }
-  var ziele={};
-  function zaehle(id,ziel,d){var el=document.getElementById(id);var von=ziele[id]||0;ziele[id]=ziel;if(reduziert){el.textContent=fmt(ziel,d);return;}
-    var t0=performance.now();(function schritt(t){var p=Math.min(1,(t-t0)/700);p=1-Math.pow(1-p,3);el.textContent=fmt(von+(ziel-von)*p,d);if(p<1)requestAnimationFrame(schritt);})(t0);}
-  faelle.addEventListener('input',rechnen);satz.addEventListener('input',rechnen);
-  // Knoten
-  function knoten(x,i){
-    var d=document.createElement('div');d.className='rg__knoten rg__knoten--'+x.wer;
-    d.innerHTML='<div class="rg__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'+ICON[x.wer]+'</svg></div>'
-      +'<div class="rg__txt"><b>'+(i+1)+'. '+esc(x.name)+'</b><span>'+esc(x.detail)+'</span><em>'+WERTEXT[x.wer]+(x.werkzeug?' · '+esc(x.werkzeug):'')+'</em></div>'
-      +'<div class="rg__min"><s>'+fmt(x.min_vorher,x.min_vorher<10?1:0)+' Min</s><strong>'+fmt(x.min_nachher,x.min_nachher<10?1:0)+' Min</strong><small>je Fall</small></div>';
-    bahn.appendChild(d);requestAnimationFrame(function(){requestAnimationFrame(function(){d.classList.add('is-da');linieZeichnen();});});
-  }
-  // Verbindungslinie mit wandernden Datenpaketen
-  function linieZeichnen(){
-    // Nur die Luecken zwischen den Icons verbinden. offsetTop statt getBoundingClientRect: unabhaengig von der Einblend-Bewegung.
-    var ks=bahn.querySelectorAll('.rg__knoten');if(ks.length<2){linie.innerHTML='';return;}
-    var pos=[].map.call(ks,function(k){var ic=k.querySelector('.rg__icon');return {x:k.offsetLeft+ic.offsetLeft+ic.offsetWidth/2,o:k.offsetTop+ic.offsetTop,u:k.offsetTop+ic.offsetTop+ic.offsetHeight};});
-    var x=pos[0].x,abst=6,h='',dauer=0.55;
-    linie.setAttribute('viewBox','0 0 '+bahn.offsetWidth+' '+bahn.offsetHeight);
-    for(var i=0;i<pos.length-1;i++){
-      var y1=pos[i].u+abst,y2=pos[i+1].o-abst;if(y2<=y1)continue;
-      var d='M'+x.toFixed(1)+' '+y1.toFixed(1)+' L'+x.toFixed(1)+' '+y2.toFixed(1);
-      h+='<path d="'+d+'" fill="none" stroke="rgba(255,255,255,.16)" stroke-width="2" stroke-linecap="round"/>'
-        +'<path d="'+d+'" fill="none" stroke="rgba(255,255,255,.7)" stroke-width="2" stroke-dasharray="4 10" stroke-linecap="round">'+(reduziert?'':'<animate attributeName="stroke-dashoffset" from="28" to="0" dur="1s" repeatCount="indefinite"/>')+'</path>';
-      if(!reduziert){var gesamt=(pos.length-1)*dauer;
-        h+='<circle r="3.5" fill="#fff" opacity="0"><animateMotion path="'+d+'" dur="'+gesamt+'s" keyPoints="0;0;1;1" keyTimes="0;'+(i*dauer/gesamt).toFixed(3)+';'+((i+1)*dauer/gesamt).toFixed(3)+';1" calcMode="linear" repeatCount="indefinite"/>'
-          +'<animate attributeName="opacity" dur="'+gesamt+'s" values="0;1;1;0;0" keyTimes="0;'+(i*dauer/gesamt+0.001).toFixed(3)+';'+((i+1)*dauer/gesamt-0.001).toFixed(3)+';'+((i+1)*dauer/gesamt).toFixed(3)+';1" repeatCount="indefinite"/></circle>';}
-    }
-    linie.innerHTML=h;
-  }
-  bahn.addEventListener('transitionend',function(e){if(e.target.classList&&e.target.classList.contains('rg__knoten')&&e.propertyName==='transform')linieZeichnen();});
-  window.addEventListener('resize',function(){if(schritte.length)linieZeichnen();});
-  function zuruecksetzen(){schritte=[];titel=null;[].forEach.call(bahn.querySelectorAll('.rg__knoten'),function(k){k.remove();});linie.innerHTML='';
-    sec.classList.remove('is-fertig','is-rechnung','is-fehler','is-leer');anf&&anf.classList.remove('is-offen');document.getElementById('rgCta').disabled=true;document.getElementById('rgHebel').textContent='';document.getElementById('rgQuick').textContent='';
-    document.getElementById('rgName').innerHTML='&nbsp;';document.getElementById('rgBereich').textContent='KI analysiert …';ziele={};}
-  function fehlerZeigen(t){sec.classList.add('is-fehler','is-fertig');sec.classList.toggle('is-leer',!schritte.length);fehler.textContent=t;status.textContent='Unterbrochen';}
-  function zeile(o){
-    if(o.t==='titel'){titel=o;document.getElementById('rgName').textContent=o.titel;document.getElementById('rgBereich').textContent=o.bereich||'Ablauf';
-      faelle.value=Math.max(1,Math.min(500,Math.round(o.faelle_pro_woche)));
-      document.getElementById('rgAnnahme').textContent='Annahme der KI: '+String(o.annahme||'').replace(/[.\s]+$/,'')+'. Dazu 46 Arbeitswochen pro Jahr. Schätzung, keine Zusage. Regler anpassen.';
-      status.textContent='Schritte werden erkannt';}
-    else if(o.t==='schritt'){schritte.push(o);knoten(o,schritte.length-1);status.textContent=schritte.length+' Schritte erkannt';
-      if(schritte.length>=2)sec.classList.add('is-rechnung');rechnen();}
-    else if(o.t==='hebel'){document.getElementById('rgHebel').textContent=o.text;}
-    else if(o.t==='quickwin'){document.getElementById('rgQuick').textContent=o.text;}
-    else if(o.t==='abbruch'){fehlerZeigen(o.grund||'Beschreib bitte einen konkreten Ablauf aus deinem Betrieb.');}
-    else if(o.t==='fehler'){fehlerZeigen(o.text);}
-    else if(o.t==='ende'){if(!schritte.length&&!sec.classList.contains('is-fehler'))fehlerZeigen('Dazu konnte die KI keinen Ablauf erkennen. Beschreib ihn etwas genauer.');
-      sec.classList.add('is-fertig');if(schritte.length)status.textContent='Fertig · '+schritte.length+' Schritte';
-      document.getElementById('rgCta').disabled=!schritte.length;
-      try{if(window.gtag)gtag('event','ki_roentgen',{schritte:schritte.length});}catch(e){}}
-  }
-  function starten(){
-    var text=ta.value.trim();if(laeuft)return;
-    if(text.length<12){ta.focus();ta.setAttribute('placeholder','Bitte beschreib deinen Ablauf in einem ganzen Satz …');return;}
-    laeuft=true;los.disabled=true;zuruecksetzen();sec.classList.add('is-aktiv');status.textContent='Verbinde mit der KI';
-    var buehne=document.getElementById('rgBuehne');setTimeout(function(){var r=buehne.getBoundingClientRect();if(r.top>window.innerHeight*.6||r.top<0)window.scrollTo({top:window.scrollY+r.top-120,behavior:reduziert?'auto':'smooth'});},60);
-    fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text:text})}).then(function(res){
-      if(!res.ok){return res.json().catch(function(){return {};}).then(function(j){fehlerZeigen(j.fehler||'Die KI ist gerade nicht erreichbar. Versuch es gleich noch einmal.');});}
-      var rd=res.body.getReader(),dec=new TextDecoder(),puf='';
-      function lesen(){return rd.read().then(function(r){
-        if(r.done){if(puf.trim()){try{zeile(JSON.parse(puf));}catch(e){}}if(!sec.classList.contains('is-fertig'))zeile({t:'ende'});return;}
-        puf+=dec.decode(r.value,{stream:true});var p;
-        while((p=puf.indexOf('\n'))>=0){var z=puf.slice(0,p).trim();puf=puf.slice(p+1);if(z){try{zeile(JSON.parse(z));}catch(e){}}}
-        return lesen();});}
-      return lesen();
-    }).catch(function(){fehlerZeigen('Keine Verbindung zur KI. Prüf deine Internetverbindung und versuch es noch einmal.');})
-    .then(function(){laeuft=false;los.disabled=false;});
-  }
-  form.addEventListener('submit',function(e){e.preventDefault();starten();});
-  // Kurzanfrage direkt aus dem Ergebnis
-  var anf=document.getElementById('rgAnfrage'),anfForm=document.getElementById('rgAnfForm'),anfErr=document.getElementById('rgAnfErr');
-  function zusammenfassung(){
-    var f=+faelle.value,sz=+satz.value,v=0,n=0;schritte.forEach(function(x){v+=x.min_vorher;n+=x.min_nachher;});
-    var std=Math.round(Math.max(0,(v-n)*f*46/60));
-    var z=['Beschreibung: '+ta.value.trim(),'Ablauf: '+(titel&&titel.titel||'')+(titel&&titel.bereich?' ('+titel.bereich+')':''),
-      'Schritte:'].concat(schritte.map(function(x,i){return ' '+(i+1)+'. '+x.name+' ['+WERTEXT[x.wer]+(x.werkzeug?', '+x.werkzeug:'')+'] '+x.min_vorher+' -> '+x.min_nachher+' Min';}))
-      .concat(['Fälle pro Woche: '+f+', Stundensatz: '+sz+' EUR','Ersparnis: ca. '+std+' Std./Jahr, ca. '+Math.round(std*sz/10)*10+' EUR',
-        'Größter Hebel: '+document.getElementById('rgHebel').textContent,'Quick Win: '+document.getElementById('rgQuick').textContent]);
-    return {text:z.join('\n').slice(0,1990),std:std};}
-  document.getElementById('rgCta').addEventListener('click',function(){
-    if(!schritte.length)return;var zf=zusammenfassung();
-    document.getElementById('rgAblaufFeld').value=zf.text;
-    document.getElementById('rgMit').innerHTML='Wird mitgeschickt: <b>'+esc(titel&&titel.titel||'Dein Ablauf')+'</b> · '+schritte.length+' Schritte · ca. '+fmt(zf.std)+' Std. Ersparnis pro Jahr';
-    anf.classList.add('is-offen');anf.scrollIntoView({behavior:reduziert?'auto':'smooth',block:'start'});
-    setTimeout(function(){document.getElementById('rg-name').focus({preventScroll:true});},reduziert?0:450);
-    try{if(window.gtag)gtag('event','ki_roentgen_cta');}catch(e){}});
-  anfForm.addEventListener('submit',function(e){
-    var nm=document.getElementById('rg-name'),ma=document.getElementById('rg-mail'),ds=document.getElementById('rg-ds'),m='';
-    if(!nm.value.trim()){m='Bitte gib deinen Namen an.';nm.focus();}
-    else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(ma.value.trim())){m='Bitte prüf deine E-Mail-Adresse.';ma.focus();}
-    else if(!ds.checked){m='Bitte bestätige den Datenschutz.';}
-    if(m){e.preventDefault();anfErr.textContent=m;anfErr.hidden=false;return;}
-    document.getElementById('rgAblaufFeld').value=zusammenfassung().text;
-    var b=document.getElementById('rgAnfSend');b.disabled=true;b.textContent='Wird gesendet …';});
-  document.getElementById('rgNeu').addEventListener('click',function(){zuruecksetzen();sec.classList.remove('is-aktiv');ta.value='';hoehe();ta.focus();});
-  // Hintergrund: Partikelfeld, das sich zum Mauszeiger hin verdichtet
-  var cv=document.getElementById('rgFeld');
-  if(cv&&!reduziert&&cv.getContext){
-    var cx=cv.getContext('2d'),W=0,H=0,pt=[],maus={x:-999,y:-999},sichtbar=false,dpr=Math.min(2,window.devicePixelRatio||1);
-    function groesse(){var r=sec.getBoundingClientRect();var nw=Math.round(r.width),nh=Math.round(r.height);if(nw===W&&nh===H)return;
-      var aw=W||nw,ah=H||nh;W=nw;H=nh;cv.width=W*dpr;cv.height=H*dpr;cv.style.width=W+'px';cv.style.height=H+'px';cx.setTransform(dpr,0,0,dpr,0,0);
-      pt.forEach(function(p){p.x=p.x/aw*W;p.y=p.y/ah*H;});
-      var n=Math.round(Math.min(140,W*H/14000));while(pt.length<n)pt.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3});pt.length=n;}
-    groesse();window.addEventListener('resize',groesse);if(window.ResizeObserver)new ResizeObserver(groesse).observe(sec);
-    sec.addEventListener('pointermove',function(e){var r=sec.getBoundingClientRect();maus.x=e.clientX-r.left;maus.y=e.clientY-r.top;});
-    sec.addEventListener('pointerleave',function(){maus.x=-999;});
-    new IntersectionObserver(function(es){sichtbar=es[0].isIntersecting;if(sichtbar)requestAnimationFrame(male);}).observe(sec);
-    function male(){if(!sichtbar)return;cx.clearRect(0,0,W,H);
-      var aktiv=sec.classList.contains('is-aktiv')&&!sec.classList.contains('is-fertig');
-      for(var i=0;i<pt.length;i++){var p=pt[i];var dx=maus.x-p.x,dy=maus.y-p.y,d=Math.sqrt(dx*dx+dy*dy);
-        if(d<180){p.vx+=dx/d*.012;p.vy+=dy/d*.012;}
-        p.vx*=.985;p.vy*=.985;p.x+=p.vx*(aktiv?3:1);p.y+=p.vy*(aktiv?3:1);
-        if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;
-        cx.fillStyle='rgba(255,255,255,.55)';cx.fillRect(p.x,p.y,1.6,1.6);
-        for(var j=i+1;j<pt.length;j++){var q=pt[j],ex=p.x-q.x,ey=p.y-q.y,e2=ex*ex+ey*ey;if(e2<11000){cx.strokeStyle='rgba(255,255,255,'+(0.12*(1-e2/11000))+')';cx.beginPath();cx.moveTo(p.x,p.y);cx.lineTo(q.x,q.y);cx.stroke();}}}
-      requestAnimationFrame(male);}
-  }
-})();
-
-(function(){
-  var SR=window.SpeechRecognition||window.webkitSpeechRecognition;
-  var knopf=document.getElementById('rgDiktat'),feld=document.getElementById('rg-hinweis'),hin=document.getElementById('rgDiktatHinweis');
-  if(!knopf||!feld||!hin)return;
-  if(!SR){return;}
-  knopf.hidden=false;hin.hidden=false;
-  var GRUND='Mikrofon gedrückt halten und diktieren';
-  var rec=null,an=false,text='',zwischen='',basis='',fehlerText='';
-  function zeig(t){hin.textContent=t;}
-  function setze(){feld.value=(basis?basis.replace(/\s+$/,'')+' ':'')+(text+zwischen).trim();}
-  function start(e){
-    if(e){e.preventDefault();}
-    if(an||knopf.classList.contains('is-warte'))return;
-    an=true;text='';zwischen='';fehlerText='';basis=feld.value;
-    try{rec=new SR();}catch(x){an=false;return;}
-    rec.lang='de-DE';rec.continuous=true;rec.interimResults=true;
-    rec.onresult=function(ev){zwischen='';for(var i=ev.resultIndex;i<ev.results.length;i++){var r=ev.results[i];if(r.isFinal)text+=r[0].transcript+' ';else zwischen+=r[0].transcript;}setze();};
-    rec.onerror=function(ev){fehlerText=(ev.error==='not-allowed'||ev.error==='service-not-allowed')?'Mikrofon nicht freigegeben. Bitte im Browser erlauben.':(ev.error==='no-speech'?'Nichts gehört. Nochmal gedrückt halten und sprechen.':'');};
-    rec.onend=fertig;
-    try{rec.start();}catch(x){}
-    knopf.classList.add('is-an');knopf.setAttribute('aria-pressed','true');zeig('Hört zu … zum Beenden loslassen');
-    try{if(window.gtag)gtag('event','diktat_start');}catch(x){}
-  }
-  function stopp(e){if(!an)return;an=false;knopf.classList.remove('is-an');knopf.setAttribute('aria-pressed','false');try{rec&&rec.stop();}catch(x){}}
-  function fertig(){
-    if(an){an=false;knopf.classList.remove('is-an');}
-    var roh=(text+zwischen).trim();zwischen='';
-    if(!roh){zeig(fehlerText||GRUND);return;}
-    setze();knopf.classList.add('is-warte');zeig('Wird zu sauberen Sätzen geglättet …');
-    var ctrl=window.AbortController?new AbortController():null;var t=setTimeout(function(){if(ctrl)ctrl.abort();},12000);
-    fetch('/api/diktat.php',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text:roh}),signal:ctrl?ctrl.signal:undefined})
-      .then(function(r){return r.json();})
-      .then(function(j){var sauber=(j&&j.text)?String(j.text).trim():roh;text=sauber;setze();zeig(GRUND);})
-      .catch(function(){zeig(GRUND);})
-      .then(function(){clearTimeout(t);knopf.classList.remove('is-warte');feld.dispatchEvent(new Event('input',{bubbles:true}));});
-  }
-  knopf.addEventListener('pointerdown',function(e){if(e.button!==undefined&&e.button!==0)return;try{knopf.setPointerCapture(e.pointerId);}catch(x){}start(e);});
-  knopf.addEventListener('pointerup',stopp);knopf.addEventListener('pointercancel',stopp);knopf.addEventListener('lostpointercapture',stopp);
-  knopf.addEventListener('contextmenu',function(e){e.preventDefault();});
-  knopf.addEventListener('click',function(e){e.preventDefault();});
-  knopf.addEventListener('keydown',function(e){if((e.key===' '||e.key==='Enter')&&!e.repeat){start(e);}});
-  knopf.addEventListener('keyup',function(e){if(e.key===' '||e.key==='Enter'){e.preventDefault();stopp();}});
-})();
-</script>
+</script></div></section><section class="faq section section--tint" id="faq"><div class="wrap faq__grid"><div class="faq__aside reveal"><h2>Was du vor dem Gespräch wissen willst.</h2><p class="lead">Kurz und ohne Kleingedrucktes. Alles andere klären wir in 30 Minuten.</p><div><a class="btn btn--outline" href="https://calendly.com/makemyki-info" target="_blank" rel="noopener">Frage im Erstgespräch stellen</a></div></div><div class="faq__list reveal"><details open><summary>Was kostet eine Automatisierung?<svg class="i"><use href="#i-plus"/></svg></summary><p>Das hängt vom Ablauf ab. Kleine Workflows starten im niedrigen vierstelligen Bereich, laufende Kosten für Tools liegen oft bei wenigen Euro im Monat. Im <span class="nw">KI-Check</span> rechnen wir für jeden Hebel Aufwand und Ersparnis gegeneinander.</p></details><details><summary>Müssen wir unsere Software wechseln?<svg class="i"><use href="#i-plus"/></svg></summary><p>Nein. Wir verbinden, was schon da ist: <span class="nw">E-Mail,</span> Excel, Microsoft 365, Google, ERP, CRM oder Branchensoftware. Neue Tools nur, wenn sie sich klar lohnen.</p></details><details><summary>Wie schnell läuft der erste Ablauf?<svg class="i"><use href="#i-plus"/></svg></summary><p>Kleine Workflows laufen oft nach wenigen Tagen, größere Projekte nach wenigen Wochen. Wir starten bewusst klein und bauen dann aus.</p></details><details><summary>Was passiert mit unseren Daten?<svg class="i"><use href="#i-plus"/></svg></summary><p>Wir nutzen bevorzugt Anbieter mit Servern in der EU und Verträgen zur Auftragsverarbeitung. Sensible Daten verlassen dein System nur, wenn es dafür einen klaren Grund gibt. Und jeder Schritt bleibt nachvollziehbar.</p></details><details><summary>Ersetzt KI meine Mitarbeitenden?<svg class="i"><use href="#i-plus"/></svg></summary><p>Nein. Sie nimmt deinem Team Abtippen, Suchen und Sortieren ab. Entscheidungen und Freigaben bleiben bei Menschen. So arbeiten wir auch selbst.</p></details><details><summary>Was ist, wenn etwas nicht funktioniert?<svg class="i"><use href="#i-plus"/></svg></summary><p>Jeder Workflow meldet Fehler, statt still zu scheitern. Auf Wunsch betreuen wir die Abläufe dauerhaft und passen sie an, wenn sich etwas ändert.</p></details><details><summary><span>Was ist der <span class="nw">KI-Check</span> im November?</span><svg class="i"><use href="#i-plus"/></svg></summary><p>Ein kostenloser Workshop mit schriftlichem Fahrplan und einer Demo deines größten Hebels. Nur für Anfragen im November 2026 und nur 10 Plätze.</p></details><details><summary>Arbeitet ihr auch vor Ort?<svg class="i"><use href="#i-plus"/></svg></summary><p>Wir arbeiten digital im gesamten <span class="nw">DACH-Raum.</span> Für Workshops kommen wir in Rheinland-Pfalz und Umgebung auch gern vorbei.</p></details></div></div></section>
 </main>
 <footer class="footer"><div class="wrap">
   <div class="footer__grid" style="grid-template-columns:1.5fr 1fr 1fr 1fr 1fr">
