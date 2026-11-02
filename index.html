@@ -770,6 +770,8 @@ img.avatar{object-fit:cover;padding:0}
    Füllt beim Laden genau den sichtbaren Bereich unter Promo-Leiste und Header (--hero-top per Skript) */
 .hero{min-height:calc(100vh - var(--hero-top,0px));min-height:calc(100svh - var(--hero-top,0px));display:flex;align-items:center;padding-block:clamp(40px,8vh,96px)}
 .hero > .wrap{width:100%}
+/* unten rein weiß, damit der Übergang ins KI-Röntgen ohne Kante anschließt */
+.hero{background:radial-gradient(900px 520px at 85% -10%,rgba(228,228,231,.9),transparent 60%),var(--ground)}
 .hero__grid{grid-template-columns:minmax(0,1fr)}
 .hero__copy{justify-items:center;text-align:center;gap:0}
 .hero h1{font-size:clamp(38px,min(4.2vw,7.4vh),60px);line-height:1.08;letter-spacing:-.04em}
@@ -859,6 +861,13 @@ img.avatar{object-fit:cover;padding:0}
 @media (max-width:760px){.rg__anfrage{padding:20px}.rg__anfrage .form__row{grid-template-columns:1fr}}
 .rg{position:relative;background:#0A0A0A;color:#fff;overflow:hidden;isolation:isolate}
 .rg canvas.rg__feld{position:absolute;inset:0;width:100%;height:100%;z-index:-1;opacity:.9}
+/* Übergang vom hellen Hero: oben weich von Weiß ins Dunkle, Partikel blenden erst darunter ein; Kopf und Eingabe mittig */
+.rg.section{padding-top:clamp(170px,24vh,260px)}
+.rg::before{content:"";position:absolute;inset:0 0 auto;height:clamp(190px,28vh,300px);z-index:-2;pointer-events:none;background:linear-gradient(180deg,var(--ground) 0%,rgba(255,255,255,.9) 14%,rgba(255,255,255,.62) 34%,rgba(255,255,255,.3) 56%,rgba(255,255,255,.1) 78%,rgba(255,255,255,0) 100%)}
+.rg canvas.rg__feld{-webkit-mask-image:linear-gradient(180deg,transparent 0,transparent 140px,#000 340px);mask-image:linear-gradient(180deg,transparent 0,transparent 140px,#000 340px)}
+.rg .section-head{margin-inline:auto;text-align:center;justify-items:center}
+.rg__eingabe{margin-inline:auto}
+.rg__hinweis{text-align:center}
 .rg::after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(800px 420px at 50% 0%,rgba(255,255,255,.08),transparent 70%),linear-gradient(180deg,transparent 70%,#0A0A0A)}
 .rg h2{color:#fff}.rg .eyebrow{color:#B8B8C0}
 .rg .lead{color:rgba(255,255,255,.72)}
